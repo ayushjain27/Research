@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import PrivacyPolicy from "./component/PrivacyPolicy";
 import RefundPolicy from "./component/RefundPolicy";
 import ThankYouPage from "./component/ThankyouPage";
+import InvestorCharter from "./component/InvestorCharter";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
   <Route path="/privacypolicy" element={<PrivacyPolicy />} />
   <Route path="/refundpolicy" element={<RefundPolicy />} />
   <Route path="/thankyou" element={<ThankYouPage />} />
+  <Route path="/investorCharter" element={<InvestorCharter />} />
 </Routes>
   );
 }

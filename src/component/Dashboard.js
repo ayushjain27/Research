@@ -6,8 +6,10 @@ import {
   TrendingDown, Eye, Calendar, Download, ChevronUp, ExternalLink,
   FileText, Lock, AlertCircle, HelpCircle, Clipboard, User, ChevronDown,
   Menu,
-  X
+  X,
+  Link
 } from 'lucide-react';
+import HeaderTab from './HeaderTab';
 
 const AKVHomepage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -351,118 +353,7 @@ const AKVHomepage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-      }`}>
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <AnimatedLogo />
-            
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex space-x-8 items-center">
-              <a
-                href="#home"
-                className="text-gray-700 hover:text-teal-600 transition-colors duration-200 font-medium"
-              >
-                Home
-              </a>
-              <a
-                href="#services"
-                className="text-gray-700 hover:text-teal-600 transition-colors duration-200 font-medium"
-              >
-                Research Services
-              </a>
-              <div className="relative">
-                <button 
-                  onClick={() => setComplianceOpen(!complianceOpen)}
-                  className="flex items-center text-gray-700 hover:text-teal-600 transition-colors duration-200 font-medium"
-                >
-                  SEBI Compliance
-                  <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-200 ${complianceOpen ? 'transform rotate-180' : ''}`} />
-                </button>
-                {complianceOpen && (
-                  <div className="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg py-1 z-50">
-                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Investor Charter</a>
-                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Control Policy</a>
-                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Privacy Policy</a>
-                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Code of Conduct</a>
-                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Grievance Redressal</a>
-                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Terms & Conditions</a>
-                  </div>
-                )}
-              </div>
-              <a
-                href="#contact"
-                className="text-gray-700 hover:text-teal-600 transition-colors duration-200 font-medium"
-              >
-                Contact Us
-              </a>
-            </div>
-            
-            {/* Mobile menu button */}
-            <div className="md:hidden flex items-center">
-              <button
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="text-gray-700 hover:text-teal-600 focus:outline-none"
-              >
-                {mobileMenuOpen ? (
-                  <X className="w-6 h-6" />
-                ) : (
-                  <Menu className="w-6 h-6" />
-                )}
-              </button>
-            </div>
-          </div>
-        </nav>
-        
-        {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <div className="md:hidden bg-white shadow-lg">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <a
-                href="#home"
-                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Home
-              </a>
-              <a
-                href="#services"
-                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Research Services
-              </a>
-              <div className="px-3 py-2">
-                <button 
-                  onClick={() => setComplianceOpen(!complianceOpen)}
-                  className="flex items-center text-base font-medium text-gray-700 hover:text-teal-600 w-full"
-                >
-                  SEBI Compliance
-                  <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-200 ${complianceOpen ? 'transform rotate-180' : ''}`} />
-                </button>
-                {complianceOpen && (
-                  <div className="mt-2 pl-4 space-y-1">
-                    <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-gray-50">Investor Charter</a>
-                    <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-gray-50">Control Policy</a>
-                    <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-gray-50">Privacy Policy</a>
-                    <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-gray-50">Code of Conduct</a>
-                    <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-gray-50">Grievance Redressal</a>
-                    <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-gray-50">Terms & Conditions</a>
-                  </div>
-                )}
-              </div>
-              <a
-                href="#contact"
-                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Contact Us
-              </a>
-            </div>
-          </div>
-        )}
-      </header>
+      <HeaderTab />
 
       {/* Hero Section */}
       <section id="home" className="pt-4 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden">
