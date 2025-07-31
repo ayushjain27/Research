@@ -4,13 +4,14 @@ import {
   ArrowRight, Phone, Mail, MapPin, Star, DollarSign, PieChart, 
   LineChart, Activity, Briefcase, Clock, Globe, Zap, BookOpen, 
   TrendingDown, Eye, Calendar, Download, ChevronUp, ExternalLink,
-  FileText, Lock, AlertCircle, HelpCircle, Clipboard, User
+  FileText, Lock, AlertCircle, HelpCircle, Clipboard, User, ChevronDown,
+  Menu,
+  X
 } from 'lucide-react';
 
 const AKVHomepage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [currentStat, setCurrentStat] = useState(0);
-  const [marketData, setMarketData] = useState(null);
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -21,6 +22,8 @@ const AKVHomepage = () => {
   });
   const [formErrors, setFormErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [complianceOpen, setComplianceOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Scroll handler
   useEffect(() => {
@@ -37,47 +40,6 @@ const AKVHomepage = () => {
       setCurrentStat((prev) => (prev + 1) % 4);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
-
-  // Mock API call for market data
-  useEffect(() => {
-    // In a real app, you would fetch this from a financial API
-    const fetchMarketData = async () => {
-      try {
-        // Simulating API delay
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        
-        const mockData = {
-          nifty: {
-            current: 19850.25,
-            change: 2.5,
-            high: 19920.75,
-            low: 19780.50
-          },
-          sensex: {
-            current: 66700.80,
-            change: 1.8,
-            high: 66950.25,
-            low: 66320.40
-          },
-          topGainers: [
-            { symbol: 'TCS', change: 3.2, price: 3850.75 },
-            { symbol: 'INFY', change: 2.8, price: 1650.25 },
-            { symbol: 'HDFCBANK', change: 2.1, price: 1725.50 }
-          ],
-          topLosers: [
-            { symbol: 'ITC', change: -1.8, price: 425.25 },
-            { symbol: 'RELIANCE', change: -1.2, price: 2750.75 }
-          ]
-        };
-        
-        setMarketData(mockData);
-      } catch (error) {
-        console.error('Error fetching market data:', error);
-      }
-    };
-    
-    fetchMarketData();
   }, []);
 
   const handleInputChange = (e) => {
@@ -140,18 +102,6 @@ const AKVHomepage = () => {
 
   const services = [
     {
-      icon: BarChart3,
-      title: 'Fundamental Analysis',
-      description: 'Deep dive into company financials, business models, and competitive positioning to identify undervalued opportunities.',
-      features: [
-        'Financial Statement Analysis',
-        'Ratio Analysis (P/E, P/B, ROE, etc.)',
-        'Industry Comparison',
-        'Management Quality Assessment',
-        'DCF Valuation Models'
-      ]
-    },
-    {
       icon: LineChart,
       title: 'Technical Analysis',
       description: 'Advanced chart patterns, indicators, and market sentiment analysis for optimal entry and exit points.',
@@ -164,29 +114,41 @@ const AKVHomepage = () => {
       ]
     },
     {
-      icon: PieChart,
-      title: 'Portfolio Management',
-      description: 'Customized portfolio strategies aligned with your risk profile and investment objectives.',
+      icon: BarChart3,
+      title: 'Fundamental Analysis',
+      description: 'Deep dive into company financials, business models, and competitive positioning to identify undervalued opportunities.',
       features: [
-        'Asset Allocation Strategy',
-        'Risk Assessment (Sharpe Ratio, Beta)',
-        'Sector Diversification',
-        'Performance Attribution Analysis',
-        'Tax Optimization'
+        'Financial Statement Analysis',
+        'Ratio Analysis (P/E, P/B, ROE, etc.)',
+        'Industry Comparison',
+        'Management Quality Assessment',
+        'DCF Valuation Models'
       ]
     },
     {
-      icon: Target,
-      title: 'Investment Advisory',
-      description: 'Personalized investment recommendations based on thorough research and market analysis.',
+      icon: PieChart,
+      title: 'Market Trends and Investment advisory with Market connect',
+      description: 'Identify emerging market trends and sector rotations to stay ahead of the curve.',
       features: [
-        'Buy/Sell/Hold Recommendations',
-        '12-18 Month Price Targets',
-        'Quarterly Market Outlook',
-        'Sector Rotation Strategy',
-        'Earnings Season Preview'
+        'Sector Rotation Analysis',
+        'Market Breadth Indicators',
+        'Institutional Flow Tracking',
+        'Sentiment Analysis',
+        'Seasonal Trends'
       ]
-    }
+    },
+    // {
+    //   icon: Target,
+    //   title: 'Market Connect',
+    //   description: 'Direct access to market insights and networking opportunities with industry experts.',
+    //   features: [
+    //     'Exclusive Webinars',
+    //     'Analyst Meetups',
+    //     'Corporate Access Events',
+    //     'Earnings Call Highlights',
+    //     'Management Interviews'
+    //   ]
+    // }
   ];
 
   const researchReports = [
@@ -336,12 +298,12 @@ const AKVHomepage = () => {
 
   const teamMembers = [
     {
-      name: 'Arjun Kapoor',
-      role: 'Chief Investment Officer',
+      name: 'Abishek Kondagunta Venkatesh',
+      role: 'Chief Research Analyst',
       experience: '18 years',
-      specialization: 'Fundamental Analysis',
-      bio: 'Former head of research at a leading brokerage, SEBI registered advisor with track record of identifying 25 multi-baggers',
-      education: 'MBA (Finance), CFA Charterholder'
+      specialization: 'Technical & Fundamental Analysis',
+      bio: 'SEBI Registered Research Analyst (INH000022066) with track record of identifying multi-baggers through data-driven methods',
+      education: 'MBA (Finance), CMT Level 3'
     },
     {
       name: 'Priya Sharma',
@@ -353,130 +315,38 @@ const AKVHomepage = () => {
     },
     {
       name: 'Rahul Verma',
-      role: 'Portfolio Strategist',
+      role: 'Fundamental Analyst',
       experience: '15 years',
-      specialization: 'Asset Allocation',
-      bio: 'Built wealth management strategies for 200+ families, focuses on risk-adjusted returns and tax efficiency',
-      education: 'CA, FRM'
+      specialization: 'Financial Modeling',
+      bio: 'Specializes in deep value investing and forensic accounting to identify mispriced securities',
+      education: 'CA, CFA'
     }
   ];
 
   const AnimatedLogo = () => (
-    <div className="flex items-center space-x-3">
-      <div className="relative w-12 h-10">
-        <div className="absolute inset-0 flex items-end justify-center space-x-1">
-          {[15, 8, 20, 25, 18].map((height, i) => (
-            <div
-              key={i}
-              className="w-1.5 bg-gradient-to-t from-teal-400 to-teal-500 rounded-full animate-pulse"
-              style={{ 
-                height: `${height}px`,
-                animationDelay: `${i * 0.2}s`,
-                animationDuration: '2s'
-              }}
-            />
-          ))}
+    <div className="flex flex-col">
+      <div className="flex items-center space-x-3">
+        <div className="relative w-12 h-10">
+          <div className="absolute inset-0 flex items-end justify-center space-x-1">
+            {[15, 8, 20, 25, 18].map((height, i) => (
+              <div
+                key={i}
+                className="w-1.5 bg-gradient-to-t from-teal-400 to-teal-500 rounded-full animate-pulse"
+                style={{ 
+                  height: `${height}px`,
+                  animationDelay: `${i * 0.2}s`,
+                  animationDuration: '2s'
+                }}
+              />
+            ))}
+          </div>
+          <ArrowRight className="absolute -right-1 top-2 w-4 h-4 text-orange-500 animate-bounce" />
         </div>
-        <ArrowRight className="absolute -right-1 top-2 w-4 h-4 text-orange-500 animate-bounce" />
+        <span className="text-2xl font-bold text-gray-800">AKV</span>
       </div>
-      <span className="text-2xl font-bold text-gray-800">AKV</span>
-      <span className="text-lg text-gray-600">Equity Research</span>
+      <span className="text-sm text-gray-600 mt-1">by Abishek Kondagunta Venkatesh</span>
     </div>
   );
-
-  const MarketDataWidget = () => {
-    if (!marketData) {
-      return (
-        <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl animate-pulse">
-          <div className="h-64 flex items-center justify-center">
-            <div className="text-gray-500">Loading market data...</div>
-          </div>
-        </div>
-      );
-    }
-
-    return (
-      <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl">
-        <div className="space-y-6">
-          <div className="flex items-center justify-between">
-            <h3 className="text-xl font-semibold text-gray-800">Market Overview</h3>
-            <div className="flex items-center space-x-2">
-              <Activity className="w-5 h-5 text-teal-600" />
-              <span className="text-sm text-gray-600">Live</span>
-            </div>
-          </div>
-          
-          <div className="grid grid-cols-2 gap-4">
-            <div className="bg-green-50 p-4 rounded-xl">
-              <div className="flex items-center space-x-2">
-                <TrendingUp className="w-5 h-5 text-green-600" />
-                <span className="text-sm text-green-700">NIFTY 50</span>
-              </div>
-              <div className="text-2xl font-bold text-green-600">
-                {marketData.nifty.current.toLocaleString('en-IN')}
-              </div>
-              <div className={`text-sm ${marketData.nifty.change >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                {marketData.nifty.change >= 0 ? '+' : ''}{marketData.nifty.change}%
-              </div>
-              <div className="text-xs text-gray-500 mt-1">
-                H: {marketData.nifty.high.toLocaleString('en-IN')} | L: {marketData.nifty.low.toLocaleString('en-IN')}
-              </div>
-            </div>
-            
-            <div className="bg-blue-50 p-4 rounded-xl">
-              <div className="flex items-center space-x-2">
-                <BarChart3 className="w-5 h-5 text-blue-600" />
-                <span className="text-sm text-blue-700">SENSEX</span>
-              </div>
-              <div className="text-2xl font-bold text-blue-600">
-                {marketData.sensex.current.toLocaleString('en-IN')}
-              </div>
-              <div className={`text-sm ${marketData.sensex.change >= 0 ? 'text-blue-600' : 'text-red-600'}`}>
-                {marketData.sensex.change >= 0 ? '+' : ''}{marketData.sensex.change}%
-              </div>
-              <div className="text-xs text-gray-500 mt-1">
-                H: {marketData.sensex.high.toLocaleString('en-IN')} | L: {marketData.sensex.low.toLocaleString('en-IN')}
-              </div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="space-y-3">
-              <div className="flex justify-between items-center">
-                <span className="text-gray-600">Top Gainers</span>
-                <TrendingUp className="w-4 h-4 text-green-500" />
-              </div>
-              {marketData.topGainers.map((stock, i) => (
-                <div key={i} className="flex justify-between items-center py-2 border-b border-gray-100">
-                  <span className="font-medium">{stock.symbol}</span>
-                  <div className="text-right">
-                    <div className="text-green-600 font-semibold">+{stock.change}%</div>
-                    <div className="text-xs text-gray-500">₹{stock.price.toLocaleString('en-IN')}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="space-y-3">
-              <div className="flex justify-between items-center">
-                <span className="text-gray-600">Top Losers</span>
-                <TrendingDown className="w-4 h-4 text-red-500" />
-              </div>
-              {marketData.topLosers.map((stock, i) => (
-                <div key={i} className="flex justify-between items-center py-2 border-b border-gray-100">
-                  <span className="font-medium">{stock.symbol}</span>
-                  <div className="text-right">
-                    <div className="text-red-600 font-semibold">{stock.change}%</div>
-                    <div className="text-xs text-gray-500">₹{stock.price.toLocaleString('en-IN')}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -487,31 +357,111 @@ const AKVHomepage = () => {
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <AnimatedLogo />
-            <div className="hidden md:flex space-x-8">
-              {['Home', 'Services', 'Research', 'Team', 'Pricing', 'Contact'].map((item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="text-gray-700 hover:text-teal-600 transition-colors duration-200 font-medium"
-                >
-                  {item}
-                </a>
-              ))}
-            </div>
-            <div className="flex items-center space-x-4">
-              <a 
-                href="#pricing" 
-                className="hidden md:block text-gray-700 hover:text-teal-600 transition-colors duration-200"
+            
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex space-x-8 items-center">
+              <a
+                href="#home"
+                className="text-gray-700 hover:text-teal-600 transition-colors duration-200 font-medium"
               >
-                Login
+                Home
               </a>
-              <button className="bg-teal-600 text-white px-6 py-2 rounded-full hover:bg-teal-700 transition-colors duration-200 flex items-center space-x-1">
-                <span>Get Started</span>
-                <ArrowRight className="w-4 h-4" />
+              <a
+                href="#services"
+                className="text-gray-700 hover:text-teal-600 transition-colors duration-200 font-medium"
+              >
+                Research Services
+              </a>
+              <div className="relative">
+                <button 
+                  onClick={() => setComplianceOpen(!complianceOpen)}
+                  className="flex items-center text-gray-700 hover:text-teal-600 transition-colors duration-200 font-medium"
+                >
+                  SEBI Compliance
+                  <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-200 ${complianceOpen ? 'transform rotate-180' : ''}`} />
+                </button>
+                {complianceOpen && (
+                  <div className="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg py-1 z-50">
+                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Investor Charter</a>
+                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Control Policy</a>
+                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Privacy Policy</a>
+                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Code of Conduct</a>
+                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Grievance Redressal</a>
+                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Terms & Conditions</a>
+                  </div>
+                )}
+              </div>
+              <a
+                href="#contact"
+                className="text-gray-700 hover:text-teal-600 transition-colors duration-200 font-medium"
+              >
+                Contact Us
+              </a>
+            </div>
+            
+            {/* Mobile menu button */}
+            <div className="md:hidden flex items-center">
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="text-gray-700 hover:text-teal-600 focus:outline-none"
+              >
+                {mobileMenuOpen ? (
+                  <X className="w-6 h-6" />
+                ) : (
+                  <Menu className="w-6 h-6" />
+                )}
               </button>
             </div>
           </div>
         </nav>
+        
+        {/* Mobile Navigation */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-white shadow-lg">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              <a
+                href="#home"
+                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Home
+              </a>
+              <a
+                href="#services"
+                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Research Services
+              </a>
+              <div className="px-3 py-2">
+                <button 
+                  onClick={() => setComplianceOpen(!complianceOpen)}
+                  className="flex items-center text-base font-medium text-gray-700 hover:text-teal-600 w-full"
+                >
+                  SEBI Compliance
+                  <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-200 ${complianceOpen ? 'transform rotate-180' : ''}`} />
+                </button>
+                {complianceOpen && (
+                  <div className="mt-2 pl-4 space-y-1">
+                    <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-gray-50">Investor Charter</a>
+                    <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-gray-50">Control Policy</a>
+                    <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-gray-50">Privacy Policy</a>
+                    <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-gray-50">Code of Conduct</a>
+                    <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-gray-50">Grievance Redressal</a>
+                    <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-gray-50">Terms & Conditions</a>
+                  </div>
+                )}
+              </div>
+              <a
+                href="#contact"
+                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Contact Us
+              </a>
+            </div>
+          </div>
+        )}
       </header>
 
       {/* Hero Section */}
@@ -523,67 +473,44 @@ const AKVHomepage = () => {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <div className="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-medium flex items-center">
-                    <Shield className="w-4 h-4 mr-1" />
-                    SEBI Registered
-                  </div>
-                  <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium flex items-center">
                     <FileText className="w-4 h-4 mr-1" />
-                    Research Since 2009
+                    SEBI Registered Research Analyst - INH000022066
                   </div>
                 </div>
                 <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                  Data-Driven
+                  Trade. Invest. Learn.
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-blue-600">
-                    {' '}Investment Research
+                    {' '}All guided by data-driven methods
                   </span>
-                  <br />For Smart Investors
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  Institutional-grade equity research for retail investors. Our proven methodology has delivered 
-                  consistent 18-25% annual returns since inception. Join 1000+ investors who trust our analysis.
+                  Institutional-grade equity research for both traders and investors, grounded in robust data analysis and methodologies. 
+                  Join our community to get actionable insights created by leveraging advanced analytics and systematic approaches.
                 </p>
               </div>
               
-              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+              {/* <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                 <button className="bg-teal-600 text-white px-8 py-4 rounded-full hover:bg-teal-700 transition-all duration-200 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl">
                   <span>Explore Research</span>
                   <ArrowRight className="w-5 h-5" />
                 </button>
-                <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full hover:border-teal-600 hover:text-teal-600 transition-all duration-200 flex items-center justify-center space-x-2">
-                  <span>View Performance</span>
-                  <ExternalLink className="w-5 h-5" />
-                </button>
-              </div>
-
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8">
-                {stats.map((stat, index) => {
-                  const Icon = stat.icon;
-                  return (
-                    <div 
-                      key={index}
-                      className={`text-center p-4 rounded-lg transition-all duration-500 ${
-                        currentStat === index ? 'bg-teal-50 scale-105 shadow-md' : 'bg-white/50'
-                      }`}
-                    >
-                      <Icon className={`w-8 h-8 mx-auto mb-2 ${
-                        currentStat === index ? 'text-teal-600' : 'text-gray-500'
-                      }`} />
-                      <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
-                      <div className="text-sm text-gray-600">{stat.label}</div>
-                    </div>
-                  );
-                })}
-              </div>
+              </div> */}
             </div>
 
             <div className="relative">
-              <MarketDataWidget />
-              <div className="mt-6 bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
+              <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                  alt="Data-driven research" 
+                  className="w-full h-auto rounded-xl object-cover"
+                />
+              </div>
+              {/* <div className="mt-6 bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
                 <div className="flex items-center space-x-2 text-sm text-gray-600">
                   <AlertCircle className="w-4 h-4" />
                   <span>Past performance is not indicative of future results. Investments are subject to market risk.</span>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -593,11 +520,7 @@ const AKVHomepage = () => {
       <section id="services" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16">
-            <div className="inline-flex items-center bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-sm font-medium">
-              <Lock className="w-4 h-4 mr-2" />
-              Institutional-Grade Research Tools
-            </div>
-            <h2 className="text-4xl font-bold text-gray-900">Our Research Services</h2>
+            <h2 className="text-4xl font-bold text-gray-900">Our Research Framework</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Comprehensive equity research services designed using the same methodologies 
               employed by top hedge funds and asset managers.
@@ -634,7 +557,7 @@ const AKVHomepage = () => {
       </section>
 
       {/* Research Reports Section */}
-      <section id="research" className="py-20 bg-gray-50">
+      {/* <section id="research" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-4xl font-bold text-gray-900">Latest Research Reports</h2>
@@ -733,7 +656,7 @@ const AKVHomepage = () => {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Team Section */}
       <section id="team" className="py-20 bg-white">
@@ -777,26 +700,26 @@ const AKVHomepage = () => {
           <div className="mt-12 bg-gradient-to-r from-teal-50 to-blue-50 rounded-2xl p-8 text-center">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Research Methodology</h3>
             <p className="text-gray-600 max-w-3xl mx-auto mb-6">
-              We combine fundamental analysis, technical indicators, and quantitative models to identify 
+              We combine technical indicators, fundamental analysis, and quantitative models to identify 
               high-probability investment opportunities with favorable risk-reward ratios.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               <div className="bg-white p-4 rounded-xl">
-                <div className="text-teal-600 font-bold text-lg mb-2">1. Screening</div>
+                <div className="text-teal-600 font-bold text-lg mb-2">1. Technical Screening</div>
                 <p className="text-sm text-gray-600">
-                  Quantitative filters for valuation, growth, quality, and momentum
+                  Quantitative filters for momentum, volume, and chart patterns
                 </p>
               </div>
               <div className="bg-white p-4 rounded-xl">
-                <div className="text-teal-600 font-bold text-lg mb-2">2. Analysis</div>
+                <div className="text-teal-600 font-bold text-lg mb-2">2. Fundamental Analysis</div>
                 <p className="text-sm text-gray-600">
                   Deep dive into financials, management, industry trends, and valuations
                 </p>
               </div>
               <div className="bg-white p-4 rounded-xl">
-                <div className="text-teal-600 font-bold text-lg mb-2">3. Validation</div>
+                <div className="text-teal-600 font-bold text-lg mb-2">3. Data Validation</div>
                 <p className="text-sm text-gray-600">
-                  Technical analysis and peer comparison to confirm thesis
+                  Backtesting and peer comparison to confirm thesis
                 </p>
               </div>
             </div>
@@ -816,8 +739,8 @@ const AKVHomepage = () => {
                 <p className="text-xl text-gray-600 leading-relaxed mb-6">
                   AKV Equity Research has been at the forefront of Indian capital markets, 
                   providing institutional-grade research to retail and institutional investors. 
-                  Our team of experienced analysts combines fundamental analysis with cutting-edge 
-                  technology to deliver actionable insights.
+                  Our team of experienced analysts combines technical analysis with fundamental 
+                  research to deliver actionable insights.
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed">
                   With a track record of identifying multi-bagger stocks and protecting capital 
@@ -860,7 +783,7 @@ const AKVHomepage = () => {
                 {
                   icon: Users,
                   title: 'Expert Team',
-                  description: 'Led by seasoned analysts with decades of combined experience in Indian equity markets.'
+                  description: 'Led by SEBI Registered Research Analyst with decades of experience in Indian equity markets.'
                 }
               ].map((feature, index) => {
                 const Icon = feature.icon;
@@ -1164,10 +1087,10 @@ const AKVHomepage = () => {
             <div>
               <h4 className="text-lg font-semibold mb-4">Services</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors duration-200">Fundamental Analysis</a></li>
                 <li><a href="#" className="hover:text-white transition-colors duration-200">Technical Analysis</a></li>
-                <li><a href="#" className="hover:text-white transition-colors duration-200">Portfolio Management</a></li>
-                <li><a href="#" className="hover:text-white transition-colors duration-200">Investment Advisory</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">Fundamental Analysis</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">Market Trends</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">Market Connect</a></li>
                 <li><a href="#" className="hover:text-white transition-colors duration-200">Risk Assessment</a></li>
               </ul>
             </div>
@@ -1184,13 +1107,13 @@ const AKVHomepage = () => {
             </div>
 
             <div>
-              <h4 className="text-lg font-semibold mb-4">Company</h4>
+              <h4 className="text-lg font-semibold mb-4">Compliance</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors duration-200">About Us</a></li>
-                <li><a href="#" className="hover:text-white transition-colors duration-200">Our Team</a></li>
-                <li><a href="#" className="hover:text-white transition-colors duration-200">Careers</a></li>
-                <li><a href="#" className="hover:text-white transition-colors duration-200">Contact</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">Investor Charter</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">Control Policy</a></li>
                 <li><a href="#" className="hover:text-white transition-colors duration-200">Privacy Policy</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">Code of Conduct</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">Grievance Redressal</a></li>
               </ul>
             </div>
           </div>
@@ -1201,9 +1124,7 @@ const AKVHomepage = () => {
                 © 2024 AKV Equity Research. All rights reserved.
               </div>
               <div className="flex items-center space-x-6 text-sm text-gray-400">
-                <span>SEBI Registered Investment Advisor</span>
-                <span>•</span>
-                <span>ISO 27001 Certified</span>
+                <span>SEBI Registered Research Analyst - INH000022066</span>
               </div>
             </div>
           </div>
