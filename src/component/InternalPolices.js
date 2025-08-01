@@ -107,43 +107,13 @@ const InternalPolicies = () => {
                   </button>
                   {complianceOpen && (
                     <div className="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg py-1 z-50">
-                      <a
-                        href="/investorCharter"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      >
-                        Investor Charter
-                      </a>
-                      <a
-                        href="/internalPolicies"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 bg-blue-50"
-                      >
-                        Internal Policy and Procedures
-                      </a>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      >
-                        Privacy Policy
-                      </a>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      >
-                        Code of Conduct
-                      </a>
-                      <a
-                        href="/grievance"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      >
-                        Grievance Redressal
-                      </a>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      >
-                        Terms & Conditions
-                      </a>
-                    </div>
+                    <a href="/investorCharter" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Investor Charter</a>
+                    <a href="/internalPolicies" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Internal Policy and Procedure</a>
+                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Privacy Policy</a>
+                    <a href="/codeOfConduct" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Code of Conduct</a>
+                    <a href="/grievance" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Grievance Redressal</a>
+                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Terms & Conditions</a>
+                  </div>
                   )}
                 </div>
                 <a
