@@ -568,10 +568,6 @@ const AKVHomepage = () => {
                     <span>Monday - Friday</span>
                     <span>9:00 AM - 5:00 PM</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span>Research Support</span>
-                    <span>24/7 Available</span>
-                  </div>
                 </div>
               </div>
             </div>
