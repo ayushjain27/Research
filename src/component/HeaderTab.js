@@ -71,33 +71,29 @@ const HeaderTab = () => {
               >
                 Research Services
               </a>
-              <a
-                href="/disclosure"
-                className="text-gray-700 hover:text-teal-600 transition-colors duration-200 font-medium"
-              >
-                Disclosures
-              </a>
               <div className="relative">
                 <button 
                   onClick={() => setComplianceOpen(!complianceOpen)}
                   className="flex items-center text-gray-700 hover:text-teal-600 transition-colors duration-200 font-medium"
                 >
-                  SEBI Compliance
+                  RA Compliance
                   <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-200 ${complianceOpen ? 'transform rotate-180' : ''}`} />
                 </button>
                 {complianceOpen && (
                   <div className="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg py-1 z-50">
                     <a href="/investorCharter" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Investor Charter</a>
-                    <a href="/internalPolicies" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Internal Policy and Procedure</a>
-                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Privacy Policy</a>
+                    <a href="/internalPolicies" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Internal Policies and Procedure</a>
+                    <a href="/disclosure" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Disclosures</a>
                     <a href="/codeOfConduct" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Code of Conduct</a>
                     <a href="/grievance" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Grievance Redressal</a>
-                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Terms & Conditions</a>
+                    <a href="/refundPolicy" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Refund Policy</a>
+                    <a href="/privacyPolicy" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Privacy Policy</a>
+                    <a href="/termsAndConditions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Terms & Conditions</a>
                   </div>
                 )}
               </div>
               <a
-                href="#contact"
+                href="/contact"
                 className="text-gray-700 hover:text-teal-600 transition-colors duration-200 font-medium"
               >
                 Contact Us
@@ -138,33 +134,29 @@ const HeaderTab = () => {
               >
                 Research Services
               </a>
-              <a
-                href="/disclosure"
-                className="text-gray-700 hover:text-teal-600 transition-colors duration-200 font-medium"
-              >
-                Disclosures
-              </a>
               <div className="px-3 py-2">
                 <button 
                   onClick={() => setComplianceOpen(!complianceOpen)}
                   className="flex items-center text-base font-medium text-gray-700 hover:text-teal-600 w-full"
                 >
-                  SEBI Compliance
+                  RA Compliance
                   <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-200 ${complianceOpen ? 'transform rotate-180' : ''}`} />
                 </button>
                 {complianceOpen && (
                   <div className="mt-2 pl-4 space-y-1">
                     <a href="/investorCharter" className="block px-3 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-gray-50">Investor Charter</a>
-                    <a href="/internalPolicies" className="block px-3 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-gray-50">Control Policy</a>
-                    <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-gray-50">Privacy Policy</a>
+                    <a href="/internalPolicies" className="block px-3 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-gray-50">Internal Policies and Procedure</a>
+                    <a href="/disclosure" className="block px-3 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-gray-50">Disclosures</a>
                     <a href="/codeOfConduct" className="block px-3 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-gray-50">Code of Conduct</a>
                     <a href="/grievance" className="block px-3 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-gray-50">Grievance Redressal</a>
-                    <a href="#" className="block px-3 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-gray-50">Terms & Conditions</a>
+                    <a href="/refundPolicy" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Refund Policy</a>
+                    <a href="/privacyPolicy" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Privacy Policy</a>
+                    <a href="/termsAndConditions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Terms & Conditions</a>
                   </div>
                 )}
               </div>
               <a
-                href="#contact"
+                href="/contact"
                 className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50"
                 onClick={() => setMobileMenuOpen(false)}
               >

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useRef, useState } from "react";
 import {
   Mail,
@@ -93,18 +94,12 @@ const InvestorCharter = () => {
                 >
                   Research Services
                 </a>
-                <a
-                  href="/disclosure"
-                  className="text-gray-700 hover:text-teal-600 transition-colors duration-200 font-medium"
-                >
-                  Disclosures
-                </a>
                 <div className="relative">
                   <button
                     onClick={() => setComplianceOpen(!complianceOpen)}
                     className="flex items-center text-gray-700 hover:text-teal-600 transition-colors duration-200 font-medium"
                   >
-                    SEBI Compliance
+                    RA Compliance
                     <ChevronDown
                       className={`w-4 h-4 ml-1 transition-transform duration-200 ${
                         complianceOpen ? "transform rotate-180" : ""
@@ -126,10 +121,10 @@ const InvestorCharter = () => {
                         Internal Policy and Procedures
                       </a>
                       <a
-                        href="#"
+                        href="/disclosure"
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                       >
-                        Privacy Policy
+                        Disclosures
                       </a>
                       <a
                         href="/codeOfConduct"
@@ -143,17 +138,14 @@ const InvestorCharter = () => {
                       >
                         Grievance Redressal
                       </a>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      >
-                        Terms & Conditions
-                      </a>
+                      <a href="/refundPolicy" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Refund Policy</a>
+                    <a href="/privacyPolicy" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Privacy Policy</a>
+                    <a href="/termsAndConditions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Terms & Conditions</a>
                     </div>
                   )}
                 </div>
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="text-gray-700 hover:text-teal-600 transition-colors duration-200 font-medium"
                 >
                   Contact Us
@@ -181,7 +173,7 @@ const InvestorCharter = () => {
             <div className="md:hidden bg-white shadow-lg">
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a
-                  href="#home"
+                  href="/"
                   className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50"
                   onClick={() => setMobileMenuOpen(false)}
                 >
@@ -199,7 +191,7 @@ const InvestorCharter = () => {
                     onClick={() => setComplianceOpen(!complianceOpen)}
                     className="flex items-center text-base font-medium text-gray-700 hover:text-teal-600 w-full"
                   >
-                    SEBI Compliance
+                    RA Compliance
                     <ChevronDown
                       className={`w-4 h-4 ml-1 transition-transform duration-200 ${
                         complianceOpen ? "transform rotate-180" : ""
@@ -209,46 +201,38 @@ const InvestorCharter = () => {
                   {complianceOpen && (
                     <div className="mt-2 pl-4 space-y-1">
                       <a
-                        href="#"
+                        href="/investorCharter"
                         className="block px-3 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-gray-50"
                       >
                         Investor Charter
                       </a>
                       <a
-                        href="#"
+                        href="/internalPolicies"
                         className="block px-3 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-gray-50"
                       >
-                        Control Policy
+                        Internal Policies and Procedure
                       </a>
+                      <a href="/disclosure" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Disclosures</a>
                       <a
-                        href="#"
-                        className="block px-3 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-gray-50"
-                      >
-                        Privacy Policy
-                      </a>
-                      <a
-                        href="#"
+                        href="/codeOfConduct"
                         className="block px-3 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-gray-50"
                       >
                         Code of Conduct
                       </a>
                       <a
-                        href="#"
+                        href="/grievance"
                         className="block px-3 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-gray-50"
                       >
                         Grievance Redressal
                       </a>
-                      <a
-                        href="#"
-                        className="block px-3 py-2 text-sm text-gray-700 hover:text-teal-600 hover:bg-gray-50"
-                      >
-                        Terms & Conditions
-                      </a>
+                      <a href="/refundPolicy" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Refund Policy</a>
+                    <a href="/privacyPolicy" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Privacy Policy</a>
+                    <a href="/termsAndConditions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Terms & Conditions</a>
                     </div>
                   )}
                 </div>
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50"
                   onClick={() => setMobileMenuOpen(false)}
                 >
@@ -263,7 +247,7 @@ const InvestorCharter = () => {
         <main className="max-w-7xl mx-auto px-0 py-8">
           <div className="bg-white rounded-none shadow-sm border border-gray-200 overflow-hidden">
             {/* Header with title */}
-            <div className="bg-gradient-to-r from-teal-600 to-blue-600 p-6">
+            <div className="bg-gradient-to-r from-teal-600 to-blue-600 p-6 rounded-t-lg">
               <h1 className="text-2xl md:text-3xl font-bold text-white">
                 Investor Charter
               </h1>
@@ -298,11 +282,11 @@ const InvestorCharter = () => {
               {/* Vision & Mission Section */}
               <section ref={visionRef} className="scroll-mt-2">
                 <div className="space-y-2">
-                  <h2 className="text-2xl font-bold text-gray-800 mb-4">
+                  <h2 className="text-2xl font-bold text-gray-800 mb-2">
                     Vision & Mission
                   </h2>
                   <div className="bg-gradient-to-r from-teal-50 to-blue-50 p-6 rounded-xl">
-                    <h3 className="text-2xl font-bold text-teal-800 mb-4">
+                    <h3 className="text-2xl font-bold text-teal-800">
                       Vision
                     </h3>
                     <p className="text-lg text-gray-700">
@@ -310,7 +294,7 @@ const InvestorCharter = () => {
                     </p>
                   </div>
                   <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-xl">
-                    <h3 className="text-2xl font-bold text-blue-800 mb-4">
+                    <h3 className="text-2xl font-bold text-blue-800">
                       Mission
                     </h3>
                     <p className="text-lg text-gray-700">
@@ -330,7 +314,7 @@ const InvestorCharter = () => {
                     Details of business transacted by the Research Analyst with
                     respect to the investors
                   </h2>
-                  <ul className="space-y-4 list-disc pl-6 text-gray-700">
+                  <ul className="space-y-1 list-disc pl-6 text-gray-700">
                     <li>
                       To publish research report based on the research
                       activities of the RA
@@ -370,11 +354,11 @@ const InvestorCharter = () => {
                     Timelines)
                   </h2>
 
-                  <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-                    <h3 className="text-xl font-semibold text-teal-700 mb-3">
+                  <div className="bg-white border border-gray-200 rounded-xl px-6 py-4 shadow-sm">
+                    <h3 className="text-xl font-semibold text-teal-700 mb-1">
                       Onboarding of Clients
                     </h3>
-                    <ul className="space-y-3 list-disc pl-6 text-gray-700">
+                    <ul className="space-y-1 list-disc pl-6 text-gray-700">
                       <li>
                         Sharing of terms and conditions of research services
                       </li>
@@ -382,11 +366,11 @@ const InvestorCharter = () => {
                     </ul>
                   </div>
 
-                  <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-                    <h3 className="text-xl font-semibold text-teal-700 mb-3">
+                  <div className="bg-white border border-gray-200 rounded-xl px-6 py-4 shadow-sm">
+                    <h3 className="text-xl font-semibold text-teal-700 mb-1">
                       Disclosure to Clients:
                     </h3>
-                    <ul className="space-y-3 list-disc pl-6 text-gray-700">
+                    <ul className="space-y-1 list-disc pl-6 text-gray-700">
                       <li>
                         To disclose, information that is material for the client
                         to make an informed decision, including details of its
@@ -455,27 +439,27 @@ const InvestorCharter = () => {
                   </h2>
 
                   <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-                    <h3 className="text-xl font-semibold text-teal-700 mb-3">
+                    <h3 className="text-xl font-semibold text-teal-700">
                       1. Investor can lodge complaint/grievance against Research
                       Analyst in the following ways:
                     </h3>
 
-                    <div className="mt-4">
-                      <h4 className="font-bold text-gray-800 mb-2">
+                    <div className="mt-2">
+                      <h4 className="font-bold text-gray-800 ">
                         Mode of filing the complaint with research analyst
                       </h4>
-                      <p className="text-gray-700 mb-4">
+                      <p className="text-gray-700 mb-2">
                         In case of any grievance / complaint, an investor may
                         approach the concerned Research Analyst who shall strive
                         to redress the grievance immediately, but not later than
                         21 days of the receipt of the grievance.
                       </p>
 
-                      <h4 className="font-bold text-gray-800 mb-2">
+                      <h4 className="font-bold text-gray-800 ">
                         Mode of filing the complaint on SCORES or with Research
                         Analyst Administration and Supervisory Body (RAASB)
                       </h4>
-                      <ul className="space-y-3 list-disc pl-6 text-gray-700">
+                      <ul className="space-y-1 list-disc pl-6 text-gray-700">
                         <li>
                           <span className="font-medium">SCORES 2.0</span> (a web
                           based centralized grievance redressal system of SEBI
@@ -494,7 +478,7 @@ const InvestorCharter = () => {
                         <li>
                           Two level review for complaint/grievance against
                           Research Analyst:
-                          <ul className="list-disc pl-6 mt-2 space-y-2">
+                          <ul className="list-disc pl-6 mt-1 space-y-1">
                             <li>
                               First review done by designated body (RAASB)
                             </li>
@@ -505,8 +489,8 @@ const InvestorCharter = () => {
                       </ul>
                     </div>
 
-                    <div className="mt-6">
-                      <h4 className="font-bold text-gray-800 mb-2">
+                    <div className="mt-2">
+                      <h4 className="font-bold text-gray-800 ">
                         2. If the Investor is not satisfied with the resolution
                         provided by the Market Participants
                       </h4>
@@ -517,8 +501,8 @@ const InvestorCharter = () => {
                       </p>
                     </div>
 
-                    <div className="mt-6 bg-gray-50 p-4 rounded-lg border border-gray-200">
-                      <h4 className="font-bold text-gray-800 mb-2">
+                    <div className="mt-4 bg-gray-50 p-4 rounded-lg border border-gray-200">
+                      <h4 className="font-bold text-gray-800 ">
                         With regard to physical complaints, investors may send
                         their complaints to:
                       </h4>
@@ -547,7 +531,7 @@ const InvestorCharter = () => {
                     Rights of investors
                   </h2>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                     {[
                       "Right to Privacy and Confidentiality",
                       "Right to Transparent Practices",
@@ -584,7 +568,7 @@ const InvestorCharter = () => {
                     <h3 className="text-xl font-semibold text-teal-700 mb-3">
                       Do's
                     </h3>
-                    <ol className="space-y-4 list-decimal pl-6 text-gray-700">
+                    <ol className="space-y-1 list-decimal pl-6 text-gray-700">
                       <li>
                         Always deal with SEBI registered Research Analyst.
                       </li>
@@ -662,7 +646,7 @@ const InvestorCharter = () => {
                     <h3 className="text-xl font-semibold text-orange-700 mb-3">
                       Don'ts
                     </h3>
-                    <ol className="space-y-4 list-decimal pl-6 text-gray-700">
+                    <ol className="space-y-1 list-decimal pl-6 text-gray-700">
                       <li>
                         Do not provide funds for investment to the Research
                         Analyst.
@@ -693,12 +677,12 @@ const InvestorCharter = () => {
                   </h2>
 
                   <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-                    <h3 className="text-xl font-semibold text-teal-700 mb-4">
+                    <h3 className="text-xl font-semibold text-teal-700 mb-2">
                       Formats for investors complaints data to be disclosed
                       monthly by RAs on their website/mobile application:
                     </h3>
 
-                    <p className="text-gray-700 mb-6">
+                    <p className="text-gray-700 mb-4">
                       Data for the month ending -_____
                     </p>
 
@@ -821,7 +805,7 @@ const InvestorCharter = () => {
                   </div>
 
                   <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm mt-8">
-                    <h3 className="text-xl font-semibold text-teal-700 mb-4">
+                    <h3 className="text-xl font-semibold text-teal-700 mb-2">
                       Trend of monthly disposal of complaints
                     </h3>
 

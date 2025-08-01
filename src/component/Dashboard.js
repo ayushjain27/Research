@@ -1001,7 +1001,7 @@ const AKVHomepage = () => {
               <h4 className="text-lg font-semibold mb-4">Compliance</h4>
               <ul className="space-y-2 text-gray-400">
                 <li><a href="#" className="hover:text-white transition-colors duration-200">Investor Charter</a></li>
-                <li><a href="#" className="hover:text-white transition-colors duration-200">Control Policy</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">Internal Policies and Procedure</a></li>
                 <li><a href="#" className="hover:text-white transition-colors duration-200">Privacy Policy</a></li>
                 <li><a href="#" className="hover:text-white transition-colors duration-200">Code of Conduct</a></li>
                 <li><a href="#" className="hover:text-white transition-colors duration-200">Grievance Redressal</a></li>

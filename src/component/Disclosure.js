@@ -6,6 +6,7 @@ const StandardDisclosures = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
+      <div className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
       <HeaderTab />
 
       {/* Main Content */}
@@ -18,11 +19,11 @@ const StandardDisclosures = () => {
         </div>
         <div className="bg-white rounded-b-lg shadow-sm border border-gray-200 overflow-y-auto" style={{ maxHeight: 'calc(100vh - 200px)' }}>
           {/* Content Sections */}
-          <div className="p-6 md:p-8 space-y-8">
+          <div className="p-6 md:p-8 space-y-4">
             {/* Purpose Section */}
             <section className="bg-gradient-to-r from-gray-50 to-gray-100 p-6 rounded-lg">
-              <h2 className="text-xl font-bold text-gray-800 mb-4">Purpose</h2>
-              <div className="space-y-4 text-gray-700">
+              <h2 className="text-xl font-bold text-gray-800 mb-2">Purpose</h2>
+              <div className="space-y-1 text-gray-700">
                 <p>
                   The particulars present in this document has been prepared in
                   accordance with SEBI (Research Analyst) Regulations, 2014.
@@ -44,10 +45,10 @@ const StandardDisclosures = () => {
 
             {/* History Section */}
             <section className="bg-gradient-to-r from-gray-50 to-gray-100 p-6 rounded-lg">
-              <h2 className="text-xl font-bold text-gray-800 mb-4">
+              <h2 className="text-xl font-bold text-gray-800 mb-2">
                 History, Present business and Background
               </h2>
-              <div className="space-y-4 text-gray-700">
+              <div className="space-y-1 text-gray-700">
                 <p>
                   Abishek Kondagunta Venkatesh is a SEBI registered Research
                   Analyst with registration no. INH000022066 valid from July 28,
@@ -67,10 +68,10 @@ const StandardDisclosures = () => {
 
             {/* Terms and Conditions Section */}
             <section className="bg-gradient-to-r from-gray-50 to-gray-100 p-6 rounded-lg">
-              <h2 className="text-xl font-bold text-gray-800 mb-4">
+              <h2 className="text-xl font-bold text-gray-800 mb-2">
                 Terms and Conditions of research services
               </h2>
-              <div className="space-y-4 text-gray-700">
+              <div className="space-y-1 text-gray-700">
                 <p>
                   Research services will be limited to providing independent
                   research reports and recommendations and will not involve any
@@ -113,10 +114,10 @@ const StandardDisclosures = () => {
 
             {/* Disciplinary History Section */}
             <section className="bg-gradient-to-r from-gray-50 to-gray-100 p-6 rounded-lg">
-              <h2 className="text-xl font-bold text-gray-800 mb-4">
+              <h2 className="text-xl font-bold text-gray-800 mb-2">
                 Disciplinary History
               </h2>
-              <div className="space-y-4 text-gray-700">
+              <div className="space-y-1 text-gray-700">
                 <p>
                   No penalties/directions have been issued by SEBI under the
                   SEBI ACT or regulations made there under against the research
@@ -133,10 +134,10 @@ const StandardDisclosures = () => {
 
             {/* Details of Associates Section */}
             <section className="bg-gradient-to-r from-gray-50 to-gray-100 p-6 rounded-lg">
-              <h2 className="text-xl font-bold text-gray-800 mb-4">
+              <h2 className="text-xl font-bold text-gray-800 mb-2">
                 Details of Associates
               </h2>
-              <div className="space-y-4 text-gray-700">
+              <div className="space-y-1 text-gray-700">
                 <p>
                   There are no associates employed by the research analyst
                   currently.
@@ -146,11 +147,11 @@ const StandardDisclosures = () => {
 
             {/* Disclosures Section */}
             <section className="bg-gradient-to-r from-gray-50 to-gray-100 p-6 rounded-lg">
-              <h2 className="text-xl font-bold text-gray-800 mb-4">
+              <h2 className="text-xl font-bold text-gray-800 mb-2">
                 Disclosures with respect to research and recommendations
                 services
               </h2>
-              <div className="space-y-4 text-gray-700">
+              <div className="space-y-1 text-gray-700">
                 <ul className="list-disc pl-5 space-y-2">
                   <li>
                     The research analyst or associates do not trade in
@@ -219,10 +220,10 @@ const StandardDisclosures = () => {
 
             {/* Disclaimer Section */}
             <section className="bg-gradient-to-r from-gray-50 to-gray-100 p-6 rounded-lg">
-              <h2 className="text-xl font-bold text-gray-800 mb-4">
+              <h2 className="text-xl font-bold text-gray-800 mb-2">
                 Disclaimer
               </h2>
-              <div className="space-y-4 text-gray-700">
+              <div className="space-y-1 text-gray-700">
                 <p>
                   Registration granted by SEBI, enlistment with BSE,
                   certification granted by NISM in no way guarantees the
@@ -234,10 +235,10 @@ const StandardDisclosures = () => {
 
             {/* Standard Warning Section */}
             <section className="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-lg border border-orange-200">
-              <h2 className="text-xl font-bold text-orange-800 mb-4">
+              <h2 className="text-xl font-bold text-orange-800 mb-2">
                 Standard warning
               </h2>
-              <div className="space-y-4 text-orange-700">
+              <div className="space-y-1 text-orange-700">
                 <p>
                   Investment in securities market are subject to market risks.
                   Read all the related documents carefully before investing.
@@ -255,6 +256,7 @@ const StandardDisclosures = () => {
             reserved.
           </p>
         </div>
+      </div>
       </div>
     </div>
   );
