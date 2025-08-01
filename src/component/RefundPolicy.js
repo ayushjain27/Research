@@ -15,14 +15,14 @@ const RefundPolicy = () => {
             <h1 className="text-2xl md:text-3xl font-bold text-white">
               REFUND POLICY
             </h1>
-            <div className="mt-2 text-white text-sm">
+            {/* <div className="mt-2 text-white text-sm">
               <p>Abishek Kondagunta Venkatesh</p>
               <p>{`SEBI Registered Research Analyst No. INH000022066 | BSE Enlistment <to be updated>`}</p>
               <p>Date of update: August 1, 2025</p>
-            </div>
+            </div> */}
           </div>
           
-          <div className="bg-white rounded-b-lg shadow-sm border border-gray-200 overflow-y-auto" style={{ maxHeight: 'calc(100vh - 300px)' }}>
+          <div className="bg-white rounded-b-lg shadow-sm border border-gray-200 overflow-y-auto" style={{ maxHeight: 'calc(100vh - 200px)' }}>
             {/* Content Sections */}
             <div className="p-6 md:p-8 space-y-4">
               {/* Introduction Section */}
