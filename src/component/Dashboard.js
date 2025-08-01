@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import HeaderTab from "./HeaderTab";
 import Logo from "./image/AKVLogo.png";
+import Image from "./image/stock market.webp";
 
 const AKVHomepage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -95,7 +96,7 @@ const AKVHomepage = () => {
   const AnimatedLogo = () => (
     <div className="flex flex-col">
       <div className="flex items-flex-start space-x-3">
-        <div className="relative w-100 md:w-150 h-8 md:h-100">
+        <div className="relative w-150 h-100">
           <img
             src={Logo} // Replace with your actual logo path
             alt="AKV Equity Research Logo"
@@ -103,7 +104,7 @@ const AKVHomepage = () => {
           />
         </div>
       </div>
-      <span className="text-xs mt-12 sm:text-sm text-white mt-0.5">
+      <span className=" text-center text-xs sm:text-sm text-white md:mt-0.5">
         by Abishek Kondagunta Venkatesh
       </span>
     </div>
@@ -156,7 +157,7 @@ const AKVHomepage = () => {
             <div className="relative">
               <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                  src={Logo}
                   alt="Data-driven research"
                   className="w-full h-auto rounded-xl object-cover"
                 />
@@ -591,15 +592,43 @@ const AKVHomepage = () => {
                 markets.
               </p>
               <div className="flex space-x-4">
-                <div className="w-8 h-8 bg-teal-600 rounded-full flex items-center justify-center hover:bg-teal-700 transition-colors duration-200 cursor-pointer">
-                  <span className="text-sm font-bold">f</span>
-                </div>
-                <div className="w-8 h-8 bg-teal-600 rounded-full flex items-center justify-center hover:bg-teal-700 transition-colors duration-200 cursor-pointer">
-                  <span className="text-sm font-bold">t</span>
-                </div>
-                <div className="w-8 h-8 bg-teal-600 rounded-full flex items-center justify-center hover:bg-teal-700 transition-colors duration-200 cursor-pointer">
-                  <span className="text-sm font-bold">in</span>
-                </div>
+                {/* Telegram */}
+                <a
+                  href="https://t.me/akvequityresearch"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-8 h-8 bg-teal-600 rounded-full flex items-center justify-center hover:bg-teal-700 transition-colors duration-200"
+                  aria-label="Telegram"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z" />
+                  </svg>
+                </a>
+
+                {/* X (Twitter) */}
+                <a
+                  href="https://x.com/akveq_"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-8 h-8 bg-teal-600 rounded-full flex items-center justify-center hover:bg-teal-700 transition-colors duration-200"
+                  aria-label="Twitter"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+                  </svg>
+                </a>
               </div>
             </div>
 
@@ -693,7 +722,7 @@ const AKVHomepage = () => {
                 </div>
                 <div>
                   <div className="font-medium">Email:</div>
-                  <p>abishekkvenkatesh@outlook.com</p>
+                  <p className="break-all">abishekkvenkatesh@outlook.com</p>
                 </div>
               </div>
             </div>

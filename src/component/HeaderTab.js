@@ -51,7 +51,7 @@ const HeaderTab = () => {
               Home
             </a>
             <a
-              href="#services"
+              href="https://superprofile.bio/akvequityresearch"
               className="text-gray-700 hover:text-teal-600 transition-colors duration-200 font-medium text-sm lg:text-base"
             >
               Research Services
