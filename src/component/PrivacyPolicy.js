@@ -48,7 +48,8 @@ const PrivacyPolicy = () => {
               <div className="space-y-1 text-gray-700">
                 <p>We may collect the following information:</p>
                 <ul className="list-disc pl-5 space-y-2">
-                  <li>Name, date of birth</li>
+                  <li>Name</li>
+                  <li>Date of birth</li>
                   <li>Contact information including email address and phone numbers</li>
                   <li>Demographic information such as postcode, country, city, state</li>
                   <li>Other information relevant to customer surveys and/or offers, payment options</li>
@@ -274,9 +275,9 @@ const PrivacyPolicy = () => {
             </section>
 
             {/* Contact Info Section */}
-            <section className="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-lg border border-orange-200">
-              <h2 className="text-xl font-bold text-orange-800 mb-2">Contact Information</h2>
-              <div className="space-y-1 text-orange-700">
+            <section className="bg-gradient-to-r from-blue-50 to-teal-50 p-6 rounded-lg border border-blue-200">
+              <h2 className="text-xl font-bold text-blue-800 mb-2">Contact Information</h2>
+              <div className="space-y-1 text-blue-700">
                 <p>
                   For any privacy-specific concerns, please contact us at:
                 </p>

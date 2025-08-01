@@ -88,11 +88,10 @@ const InternalPolicies = () => {
                     <p>
                       The Securities & Exchange Board of India (SEBI) has
                       formulated the SEBI Research Analyst regulations, 2014
-                      (amended w.e.f. December 16, 2024) under the powers
-                      conferred to it according to the SEBI Act, 1992. These
-                      regulations became effective starting December 1, 2014. A
-                      Research Analyst is required to follow this code both in
-                      word and spirit.
+                      under the powers conferred to it according to the SEBI
+                      Act, 1992. These regulations became effective starting
+                      December 1, 2014. A Research Analyst is required to follow
+                      this code both in word and spirit.
                     </p>
                   </div>
                 </div>

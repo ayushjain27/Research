@@ -72,95 +72,117 @@ const GrievanceRedressal = () => {
                       Saroornagar Mandal, Ranga Reddy, Telangana-500035
                     </td>
                     <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700">
-                      +91 7416931626
+                      +917416931626
                     </td>
                     <td className="border border-gray-200 px-4 py-3 text-sm text-blue-600 hover:underline">
                       <a href="mailto:abishekkvenkatesh@outlook.com">
                         abishekkvenkatesh@outlook.com
                       </a>
                     </td>
-                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700">
-                      Monday to Friday 9:00 AM – 5:00 PM
+                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700 whitespace-nowrap">
+                      Monday to Friday
+                      <br />
+                      9:00 AM – 5:00 PM
                     </td>
                   </tr>
                   <tr>
                     <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700">
                       Head of Customer Care
                     </td>
-                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-500 italic">
-                      Same as above
+                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700">
+                      Abishek Kondagunta Venkatesh
                     </td>
-                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-500 italic">
-                      Same as above
+                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700">
+                      H.No 11-9-173, Ground Floor, LaxmiNagar, Kothapet,
+                      Saroornagar Mandal, Ranga Reddy, Telangana-500035
                     </td>
-                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-500 italic">
-                      Same as above
+                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700">
+                      +917416931626
                     </td>
-                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-500 italic">
-                      Same as above
+                    <td className="border border-gray-200 px-4 py-3 text-sm text-blue-600 hover:underline">
+                      <a href="mailto:abishekkvenkatesh@outlook.com">
+                        abishekkvenkatesh@outlook.com
+                      </a>
                     </td>
-                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-500 italic">
-                      Same as above
+                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700 whitespace-nowrap">
+                      Monday to Friday
+                      <br />
+                      9:00 AM – 5:00 PM
                     </td>
                   </tr>
                   <tr>
                     <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700">
                       Compliance Officer
                     </td>
-                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-500 italic">
-                      -
+                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700">
+                      Abishek Kondagunta Venkatesh
                     </td>
-                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-500 italic">
-                      -
+                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700">
+                      H.No 11-9-173, Ground Floor, LaxmiNagar, Kothapet,
+                      Saroornagar Mandal, Ranga Reddy, Telangana-500035
                     </td>
-                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-500 italic">
-                      -
+                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700">
+                      +917416931626
                     </td>
-                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-500 italic">
-                      -
+                    <td className="border border-gray-200 px-4 py-3 text-sm text-blue-600 hover:underline">
+                      <a href="mailto:abishekkvenkatesh@outlook.com">
+                        abishekkvenkatesh@outlook.com
+                      </a>
                     </td>
-                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-500 italic">
-                      -
+                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700 whitespace-nowrap">
+                      Monday to Friday
+                      <br />
+                      9:00 AM – 5:00 PM
                     </td>
                   </tr>
                   <tr>
                     <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700">
                       CEO
                     </td>
-                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-500 italic">
-                      -
+                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700">
+                      Abishek Kondagunta Venkatesh
                     </td>
-                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-500 italic">
-                      -
+                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700">
+                      H.No 11-9-173, Ground Floor, LaxmiNagar, Kothapet,
+                      Saroornagar Mandal, Ranga Reddy, Telangana-500035
                     </td>
-                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-500 italic">
-                      -
+                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700">
+                      +917416931626
                     </td>
-                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-500 italic">
-                      -
+                    <td className="border border-gray-200 px-4 py-3 text-sm text-blue-600 hover:underline">
+                      <a href="mailto:abishekkvenkatesh@outlook.com">
+                        abishekkvenkatesh@outlook.com
+                      </a>
                     </td>
-                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-500 italic">
-                      -
+                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700 whitespace-nowrap">
+                      Monday to Friday
+                      <br />
+                      9:00 AM – 5:00 PM
                     </td>
                   </tr>
                   <tr>
                     <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700">
                       Principal Officer
                     </td>
-                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-500 italic">
-                      -
+                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700">
+                      Abishek Kondagunta Venkatesh
                     </td>
-                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-500 italic">
-                      -
+                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700">
+                      H.No 11-9-173, Ground Floor, LaxmiNagar, Kothapet,
+                      Saroornagar Mandal, Ranga Reddy, Telangana-500035
                     </td>
-                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-500 italic">
-                      -
+                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700">
+                      +917416931626
                     </td>
-                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-500 italic">
-                      -
+                    <td className="border border-gray-200 px-4 py-3 text-sm text-blue-600 hover:underline">
+                      <a href="mailto:abishekkvenkatesh@outlook.com">
+                        abishekkvenkatesh@outlook.com
+                      </a>
                     </td>
-                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-500 italic">
-                      -
+                    <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700 whitespace-nowrap">
+                      Monday to Friday
+                      <br />
+                      9:00 AM – 5:00 PM
                     </td>
                   </tr>
                 </tbody>

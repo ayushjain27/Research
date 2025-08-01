@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import HeaderTab from "./HeaderTab";
 
 const TermsAndConditions = () => {
@@ -247,22 +247,39 @@ const TermsAndConditions = () => {
                     <li>
                       If the resolution is unsatisfactory, the client can lodge
                       grievances through SEBI's SCORES platform at
-                      www.scores.sebi.gov.in
+                      <a
+                        href="www.scores.sebi.gov.in"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-teal-600 hover:underline ml-2"
+                      >
+                        (www.scores.sebi.gov.in){" "}
+                        <ExternalLink className="inline w-4 h-4" />
+                      </a>
                     </li>
                     <li>
                       The client may also consider the Online Dispute Resolution
-                      (ODR) through the Smart ODR portal at https://smartodr.in
+                      (ODR) through the Smart ODR portal at
+                      <a
+                        href="https://smartodr.in"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-teal-600 hover:underline ml-2"
+                      >
+                        (https://smartodr.in){" "}
+                        <ExternalLink className="inline w-4 h-4" />
+                      </a>
                     </li>
                   </ol>
                 </div>
               </section>
 
               {/* Important Terms Section */}
-              <section className="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-lg border border-orange-200">
-                <h2 className="text-xl font-bold text-orange-800 mb-2">
+              <section className="bg-gradient-to-r from-blue-50 to-teal-50 p-6 rounded-lg border border-blue-200">
+                <h2 className="text-xl font-bold text-blue-800 mb-2">
                   Most Important Terms and Conditions (MITC)
                 </h2>
-                <div className="space-y-1 text-orange-700">
+                <div className="space-y-1 text-blue-700">
                   <ol className="list-decimal pl-5 space-y-1">
                     <li>
                       These terms and conditions, and consent thereon are for

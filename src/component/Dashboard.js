@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import {
   TrendingUp,
   BarChart3,
-  Target,
-  Shield,
   Users,
   Award,
   CheckCircle,
@@ -11,38 +9,16 @@ import {
   Phone,
   Mail,
   MapPin,
-  Star,
   DollarSign,
   PieChart,
   LineChart,
-  Activity,
-  Briefcase,
-  Clock,
-  Globe,
-  Zap,
-  BookOpen,
-  TrendingDown,
-  Eye,
-  Calendar,
-  Download,
-  ChevronUp,
-  ExternalLink,
   FileText,
-  Lock,
-  AlertCircle,
-  HelpCircle,
-  Clipboard,
-  User,
-  ChevronDown,
-  Menu,
-  X,
-  Link,
 } from "lucide-react";
 import HeaderTab from "./HeaderTab";
+import Logo from "./image/AKVLogo.png";
 
 const AKVHomepage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [currentStat, setCurrentStat] = useState(0);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -52,9 +28,6 @@ const AKVHomepage = () => {
     message: "",
   });
   const [formErrors, setFormErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [complianceOpen, setComplianceOpen] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Scroll handler
   useEffect(() => {
@@ -64,73 +37,6 @@ const AKVHomepage = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // Stats rotation effect
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentStat((prev) => (prev + 1) % 4);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-
-    // Clear error when user types
-    if (formErrors[name]) {
-      setFormErrors((prev) => ({
-        ...prev,
-        [name]: "",
-      }));
-    }
-  };
-
-  const validateForm = () => {
-    const errors = {};
-    if (!formData.firstName.trim()) errors.firstName = "First name is required";
-    if (!formData.email.trim()) {
-      errors.email = "Email is required";
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      errors.email = "Please enter a valid email";
-    }
-    if (!formData.phone.trim()) errors.phone = "Phone number is required";
-    if (!formData.experience)
-      errors.experience = "Please select your experience level";
-
-    setFormErrors(errors);
-    return Object.keys(errors).length === 0;
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (validateForm()) {
-      setIsSubmitting(true);
-      // Simulate form submission
-      setTimeout(() => {
-        alert("Thank you for your message! We will contact you shortly.");
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          phone: "",
-          experience: "",
-          message: "",
-        });
-        setIsSubmitting(false);
-      }, 1500);
-    }
-  };
-
-  const stats = [
-    { value: "1000+", label: "Happy Clients", icon: Users },
-    { value: "₹500Cr+", label: "Assets Analyzed", icon: DollarSign },
-    { value: "98%", label: "Success Rate", icon: TrendingUp },
-    { value: "15+", label: "Years Experience", icon: Award },
-  ];
 
   const services = [
     {
@@ -186,255 +92,18 @@ const AKVHomepage = () => {
     // }
   ];
 
-  const researchReports = [
-    {
-      title: "IT Sector Outlook 2024",
-      subtitle: "Digital Transformation Driving Growth",
-      date: "July 25, 2024",
-      type: "Sector Report",
-      rating: "BUY",
-      target: "15-20% upside potential",
-      companies: [
-        { name: "TCS", current: "₹3,850", target: "₹4,500", upside: "+16.8%" },
-        {
-          name: "Infosys",
-          current: "₹1,650",
-          target: "₹1,950",
-          upside: "+18.2%",
-        },
-        { name: "Wipro", current: "₹480", target: "₹550", upside: "+14.6%" },
-        {
-          name: "HCL Tech",
-          current: "₹1,320",
-          target: "₹1,550",
-          upside: "+17.4%",
-        },
-      ],
-      performance: {
-        oneYear: "+24.5%",
-        threeYear: "+58.3%",
-        fiveYear: "+142.7%",
-        benchmark: "NIFTY IT +19.2%",
-      },
-      keyMetrics: [
-        "Revenue Growth",
-        "EBITDA Margin",
-        "FCF Yield",
-        "PAT Growth",
-      ],
-    },
-    {
-      title: "Banking Sector Deep Dive",
-      subtitle: "Credit Growth & NPA Recovery",
-      date: "July 22, 2024",
-      type: "Sector Analysis",
-      rating: "HOLD",
-      target: "10-12% upside potential",
-      companies: [
-        {
-          name: "HDFC Bank",
-          current: "₹1,725",
-          target: "₹1,900",
-          upside: "+10.1%",
-        },
-        {
-          name: "ICICI Bank",
-          current: "₹1,050",
-          target: "₹1,150",
-          upside: "+9.5%",
-        },
-        { name: "SBI", current: "₹680", target: "₹750", upside: "+10.3%" },
-        {
-          name: "Kotak Bank",
-          current: "₹1,950",
-          target: "₹2,100",
-          upside: "+7.7%",
-        },
-      ],
-      performance: {
-        oneYear: "+18.2%",
-        threeYear: "+42.8%",
-        fiveYear: "+98.5%",
-        benchmark: "NIFTY Bank +15.7%",
-      },
-      keyMetrics: ["NIM", "GNPA", "CAR", "Deposit Growth"],
-    },
-    {
-      title: "Pharma Stock Picks",
-      subtitle: "Export Recovery & Domestic Growth",
-      date: "July 20, 2024",
-      type: "Stock Recommendations",
-      rating: "BUY",
-      target: "20-25% upside potential",
-      companies: [
-        {
-          name: "Sun Pharma",
-          current: "₹1,250",
-          target: "₹1,500",
-          upside: "+20.0%",
-        },
-        {
-          name: "Dr. Reddy's",
-          current: "₹5,800",
-          target: "₹7,000",
-          upside: "+20.7%",
-        },
-        {
-          name: "Cipla",
-          current: "₹1,380",
-          target: "₹1,650",
-          upside: "+19.6%",
-        },
-        {
-          name: "Lupin",
-          current: "₹1,050",
-          target: "₹1,300",
-          upside: "+23.8%",
-        },
-      ],
-      performance: {
-        oneYear: "+15.8%",
-        threeYear: "+38.2%",
-        fiveYear: "+85.4%",
-        benchmark: "NIFTY Pharma +12.3%",
-      },
-      keyMetrics: ["US Sales", "R&D Spend", "ANDAs Filed", "Domestic Growth"],
-    },
-  ];
-
-  const testimonials = [
-    {
-      name: "Rajesh Kumar",
-      role: "Business Owner",
-      content:
-        "AKV Equity Research transformed my investment approach. Their detailed analysis helped me achieve 35% returns last year.",
-      rating: 5,
-      image: "👨‍💼",
-    },
-    {
-      name: "Priya Sharma",
-      role: "Investment Manager",
-      content:
-        "Professional, accurate, and timely research reports. Their fundamental analysis is exceptionally thorough.",
-      rating: 5,
-      image: "👩‍💼",
-    },
-    {
-      name: "Amit Patel",
-      role: "Retail Investor",
-      content:
-        "Been following their recommendations for 3 years. Consistent performance and excellent risk management.",
-      rating: 5,
-      image: "👨‍💻",
-    },
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Basic",
-      price: "₹2,999",
-      period: "/month",
-      description: "Perfect for individual investors starting their journey",
-      features: [
-        "Weekly Market Reports (PDF)",
-        "5 Stock Recommendations per month",
-        "Email Support (48hr response)",
-        "Basic Portfolio Health Check",
-        "Market News Digest",
-        "Access to Research Archive",
-      ],
-      popular: false,
-      bestFor: "Beginners with < ₹5L portfolio",
-    },
-    {
-      name: "Professional",
-      price: "₹5,999",
-      period: "/month",
-      description: "Ideal for serious investors building wealth",
-      features: [
-        "Daily Market Analysis",
-        "15 Stock Recommendations per month",
-        "Priority Phone Support",
-        "Detailed Portfolio Analysis",
-        "Sector Deep Dive Reports",
-        "Technical Analysis Tools",
-        "Risk Assessment Dashboard",
-        "Quarterly 1-on-1 Consultation",
-      ],
-      popular: true,
-      bestFor: "Investors with ₹5L-₹50L portfolio",
-    },
-    {
-      name: "Enterprise",
-      price: "Custom",
-      period: "",
-      description: "For institutions and high net-worth individuals",
-      features: [
-        "Real-time Research Alerts",
-        "Unlimited Recommendations",
-        "Dedicated Relationship Manager",
-        "Custom Research Requests",
-        "Portfolio Management Services",
-        "Direct Analyst Access",
-        "Institutional Grade Tools",
-        "Exclusive Market Events",
-      ],
-      popular: false,
-      bestFor: "HNIs & Institutions with ₹50L+ portfolio",
-    },
-  ];
-
-  const teamMembers = [
-    {
-      name: "Abishek Kondagunta Venkatesh",
-      role: "Chief Research Analyst",
-      experience: "18 years",
-      specialization: "Technical & Fundamental Analysis",
-      bio: "SEBI Registered Research Analyst (INH000022066) with track record of identifying multi-baggers through data-driven methods",
-      education: "MBA (Finance), CMT Level 3",
-    },
-    {
-      name: "Priya Sharma",
-      role: "Technical Analyst",
-      experience: "12 years",
-      specialization: "Chart Patterns & Derivatives",
-      bio: 'Recognized technical analysis expert with appearances on CNBC, author of "Mastering Indian Market Technicals"',
-      education: "MTech, CMT Level 3",
-    },
-    {
-      name: "Rahul Verma",
-      role: "Fundamental Analyst",
-      experience: "15 years",
-      specialization: "Financial Modeling",
-      bio: "Specializes in deep value investing and forensic accounting to identify mispriced securities",
-      education: "CA, CFA",
-    },
-  ];
-
   const AnimatedLogo = () => (
     <div className="flex flex-col">
-      <div className="flex items-center space-x-3">
-        <div className="relative w-12 h-10">
-          <div className="absolute inset-0 flex items-end justify-center space-x-1">
-            {[15, 8, 20, 25, 18].map((height, i) => (
-              <div
-                key={i}
-                className="w-1.5 bg-gradient-to-t from-teal-400 to-teal-500 rounded-full animate-pulse"
-                style={{
-                  height: `${height}px`,
-                  animationDelay: `${i * 0.2}s`,
-                  animationDuration: "2s",
-                }}
-              />
-            ))}
-          </div>
-          <ArrowRight className="absolute -right-1 top-2 w-4 h-4 text-orange-500 animate-bounce" />
+      <div className="flex items-flex-start space-x-3">
+        <div className="relative w-100 md:w-150 h-8 md:h-100">
+          <img
+            src={Logo} // Replace with your actual logo path
+            alt="AKV Equity Research Logo"
+            className="h-13 w-auto" // Adjust height as needed
+          />
         </div>
-        <span className="text-2xl font-bold text-gray-800">
-          AKV Equity Research
-        </span>
       </div>
-      <span className="text-sm text-gray-600 mt-1">
+      <span className="text-xs mt-12 sm:text-sm text-white mt-0.5">
         by Abishek Kondagunta Venkatesh
       </span>
     </div>
@@ -538,7 +207,12 @@ const AKVHomepage = () => {
                       <ul className="space-y-2">
                         {service.features.map((feature, i) => (
                           <li key={i} className="flex items-center space-x-2">
-                            <CheckCircle className="w-4 h-4 text-teal-600" />
+                            {feature ===
+                            "Statistical methods using average true range techniques" ? (
+                              <CheckCircle className="w-8 h-8 text-teal-600" />
+                            ) : (
+                              <CheckCircle className="w-4 h-4 text-teal-600" />
+                            )}
                             <span className="text-gray-700">{feature}</span>
                           </li>
                         ))}
@@ -657,7 +331,7 @@ const AKVHomepage = () => {
       {/* Team Section */}
       <section id="team" className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-1 mb-4">
+          {/* <div className="text-center space-y-1 mb-4">
             <h2 className="text-4xl font-bold text-gray-900">
               Meet Our Research Team
             </h2>
@@ -665,9 +339,9 @@ const AKVHomepage = () => {
               45+ years of combined market experience across bull and bear
               cycles
             </p>
-          </div>
+          </div> */}
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
               <div
                 key={index}
@@ -701,10 +375,10 @@ const AKVHomepage = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
 
-          <div className="mt-8 bg-gradient-to-r from-teal-50 to-blue-50 rounded-2xl p-8 text-center">
-            <h3 className="text-2xl font-bold text-gray-900">
+          <div className="my-4 bg-gradient-to-r from-teal-50 to-blue-50 rounded-2xl p-8 text-center">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Our Research Methodology
             </h3>
             <p className="text-gray-600 max-w-3xl mx-auto mb-4">
@@ -812,40 +486,78 @@ const AKVHomepage = () => {
               </div>
 
               <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="bg-teal-600 p-3 rounded-lg">
-                    <Phone className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <div className="font-semibold">Call Us</div>
-                    <div className="text-gray-300">+91 7416931626</div>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                  <div className="bg-teal-600 p-3 rounded-lg">
-                    <Mail className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <div className="font-semibold">Email Us</div>
-                    <div className="text-gray-300">
-                      abishekkvenkatesh@outlook.com
+                <a href="tel:+917416931626" className="block">
+                  <div className="flex items-center space-x-4">
+                    <div className="bg-teal-600 p-3 rounded-lg">
+                      <Phone className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <div className="font-semibold">Call Us</div>
+                      <div className="text-gray-300">+91 7416931626</div>
                     </div>
                   </div>
-                </div>
+                </a>
 
-                <div className="flex items-center space-x-4">
-                  <div className="bg-teal-600 p-3 rounded-lg">
-                    <MapPin className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <div className="font-semibold">Visit Us</div>
-                    <div className="text-gray-300">
-                      H.No 11-9-173, Ground Floor, LaxmiNagar, Kothapet,
-                      Saroornagar Mandal, Ranga Reddy, Telangana-500035
+                <a
+                  href="mailto:abishekkvenkatesh@outlook.com"
+                  className="block"
+                >
+                  <div className="flex items-center space-x-4">
+                    <div className="bg-teal-600 p-3 rounded-lg">
+                      <Mail className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <div className="font-semibold">Email Us</div>
+                      <div className="text-gray-300">
+                        abishekkvenkatesh@outlook.com
+                      </div>
                     </div>
                   </div>
-                </div>
+                </a>
+
+                <a
+                  href="https://maps.google.com/?q=H.No 11-9-173, Ground Floor, LaxmiNagar, Kothapet, Saroornagar Mandal, Ranga Reddy, Telangana-500035"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <div className="flex items-center space-x-4">
+                    <div className="bg-teal-600 p-3 rounded-lg">
+                      <MapPin className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <div className="font-semibold">Visit Us</div>
+                      <div className="text-gray-300">
+                        H.No 11-9-173, Ground Floor, LaxmiNagar, Kothapet,
+                        Saroornagar Mandal, Ranga Reddy, Telangana-500035
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a
+                  href="https://wa.me/917416931626"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <div className="flex items-center space-x-4">
+                    <div className="bg-teal-600 p-3 rounded-lg">
+                      <svg
+                        className="w-6 h-6"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div className="font-semibold">WhatsApp Us</div>
+                      <div className="text-gray-300">+91 7416931626</div>
+                    </div>
+                  </div>
+                </a>
               </div>
 
               <div className="bg-gradient-to-r from-teal-600 to-blue-600 p-6 rounded-2xl">
@@ -919,22 +631,6 @@ const AKVHomepage = () => {
                     Market Trends
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-white transition-colors duration-200"
-                  >
-                    Market Connect
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-white transition-colors duration-200"
-                  >
-                    Risk Assessment
-                  </a>
-                </li>
               </ul>
             </div>
 
@@ -974,14 +670,6 @@ const AKVHomepage = () => {
                     IPO Analysis
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-white transition-colors duration-200"
-                  >
-                    Earnings Preview
-                  </a>
-                </li>
               </ul>
             </div>
 
@@ -992,9 +680,9 @@ const AKVHomepage = () => {
                 <div>
                   <div className="font-medium">Registered Office:</div>
                   <p>
-                    H.No 11-9-173, Ground Floor, LaxmiNagar,
+                    H.No 11-9-173, Ground Floor, LaxmiNagar, Kothapet,
                     <br />
-                    Kothapet, Saroornagar Mandal,
+                    Saroornagar Mandal,
                     <br />
                     Ranga Reddy, Telangana-500035
                   </p>
@@ -1020,7 +708,7 @@ const AKVHomepage = () => {
                   <p>
                     Registration granted by SEBI and certification from NISM in
                     no way guarantee performance of the research analyst or
-                    provide any assurance of returns to investors.
+                    provides any assurance of returns to investors.
                   </p>
                 </div>
                 <div>
@@ -1076,7 +764,7 @@ const AKVHomepage = () => {
           <div className="border-t border-gray-700 mt-8 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <div className="text-gray-400">
-                © 2024 AKV Equity Research. All rights reserved.
+                © 2025 AKV Equity Research. All rights reserved.
               </div>
               <div className="flex items-center space-x-6 text-sm text-gray-400">
                 <span>SEBI Registered Research Analyst - INH000022066</span>
