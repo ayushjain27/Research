@@ -147,10 +147,10 @@ const CodeOfConduct = () => {
                   href="https://www.sebi.gov.in/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline flex items-center"
+                  className="text-teal-600 hover:underline flex items-center"
                 >
                   SEBI Official Website{" "}
-                  <ExternalLink className="w-4 h-4 ml-1" />
+                  <ExternalLink className="w-4 h-4" />
                 </a>
               </div>
             </div>

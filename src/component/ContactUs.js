@@ -41,7 +41,7 @@ const ContactUs = () => {
                         H.No 11-9-173, Ground Floor,<br />
                         LaxmiNagar, Kothapet,<br />
                         Saroornagar Mandal,<br />
-                        Ranga Reddy, Telangana-500035
+                        Hyderabad, Telangana-500035
                       </p>
                     </div>
                   </div>

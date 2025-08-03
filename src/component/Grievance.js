@@ -69,7 +69,7 @@ const GrievanceRedressal = () => {
                     </td>
                     <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700">
                       H.No 11-9-173, Ground Floor, LaxmiNagar, Kothapet,
-                      Saroornagar Mandal, Ranga Reddy, Telangana-500035
+                      Saroornagar Mandal, Hyderabad, Telangana-500035
                     </td>
                     <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700">
                       +917416931626
@@ -94,7 +94,7 @@ const GrievanceRedressal = () => {
                     </td>
                     <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700">
                       H.No 11-9-173, Ground Floor, LaxmiNagar, Kothapet,
-                      Saroornagar Mandal, Ranga Reddy, Telangana-500035
+                      Saroornagar Mandal, Hyderabad, Telangana-500035
                     </td>
                     <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700">
                       +917416931626
@@ -119,7 +119,7 @@ const GrievanceRedressal = () => {
                     </td>
                     <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700">
                       H.No 11-9-173, Ground Floor, LaxmiNagar, Kothapet,
-                      Saroornagar Mandal, Ranga Reddy, Telangana-500035
+                      Saroornagar Mandal, Hyderabad, Telangana-500035
                     </td>
                     <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700">
                       +917416931626
@@ -144,7 +144,7 @@ const GrievanceRedressal = () => {
                     </td>
                     <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700">
                       H.No 11-9-173, Ground Floor, LaxmiNagar, Kothapet,
-                      Saroornagar Mandal, Ranga Reddy, Telangana-500035
+                      Saroornagar Mandal, Hyderabad, Telangana-500035
                     </td>
                     <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700">
                       +917416931626
@@ -169,7 +169,7 @@ const GrievanceRedressal = () => {
                     </td>
                     <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700">
                       H.No 11-9-173, Ground Floor, LaxmiNagar, Kothapet,
-                      Saroornagar Mandal, Ranga Reddy, Telangana-500035
+                      Saroornagar Mandal, Hyderabad, Telangana-500035
                     </td>
                     <td className="border border-gray-200 px-4 py-3 text-sm text-gray-700">
                       +917416931626
@@ -214,10 +214,10 @@ const GrievanceRedressal = () => {
                   href="https://scores.sebi.gov.in/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline flex items-center"
+                  className="text-teal-600 hover:underline flex items-center"
                 >
                   Link to SCORES Portal{" "}
-                  <ExternalLink className="w-4 h-4 ml-1" />
+                  <ExternalLink className="w-4 h-4" />
                 </a>
               </div>
 
@@ -231,9 +231,9 @@ const GrievanceRedressal = () => {
                   href="https://smartodr.in/login"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline flex items-center"
+                  className="text-teal-600 hover:underline flex items-center"
                 >
-                  Link to ODR Portal <ExternalLink className="w-4 h-4 ml-1" />
+                  Link to ODR Portal <ExternalLink className="w-4 h-4" />
                 </a>
               </div>
             </div>

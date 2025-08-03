@@ -131,13 +131,13 @@ const AKVHomepage = () => {
                     SEBI Registered Research Analyst - INH000022066
                   </div>
                 </div>
-                <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                  Trade. Invest. Learn.
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-blue-600">
-                    {" "}
-                    All guided by data driven methods
-                  </span>
+                <h1 className="text-2xl lg:text-4xl font-bold text-gray-900 leading-tight">
+                  Access research, analysis and unlock knowledge.
                 </h1>
+                  <h1 className=" text-2xl lg:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-blue-600">
+                    {" "}
+                    All guided by advanced data driven methods
+                  </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
                   Professional-grade equity research for both traders and
                   investors, grounded in robust data analysis and methodologies.
@@ -517,7 +517,7 @@ const AKVHomepage = () => {
                 </a>
 
                 <a
-                  href="https://maps.google.com/?q=H.No 11-9-173, Ground Floor, LaxmiNagar, Kothapet, Saroornagar Mandal, Ranga Reddy, Telangana-500035"
+                  href="https://maps.google.com/?q=H.No 11-9-173, Ground Floor, LaxmiNagar, Kothapet, Saroornagar Mandal, Hyderabad, Telangana-500035"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block"
@@ -530,7 +530,7 @@ const AKVHomepage = () => {
                       <div className="font-semibold">Visit Us</div>
                       <div className="text-gray-300">
                         H.No 11-9-173, Ground Floor, LaxmiNagar, Kothapet,
-                        Saroornagar Mandal, Ranga Reddy, Telangana-500035
+                        Saroornagar Mandal, Hyderabad, Telangana-500035
                       </div>
                     </div>
                   </div>
@@ -562,7 +562,7 @@ const AKVHomepage = () => {
               </div>
 
               <div className="bg-gradient-to-r from-teal-600 to-blue-600 p-6 rounded-2xl">
-                <h3 className="text-xl font-semibold mb-4">Market Hours</h3>
+                <h3 className="text-xl font-semibold mb-4">Working Hours</h3>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
                     <span>Monday - Friday</span>
@@ -709,7 +709,7 @@ const AKVHomepage = () => {
                     <br />
                     Saroornagar Mandal,
                     <br />
-                    Ranga Reddy, Telangana-500035
+                    Hyderabad, Telangana-500035
                   </p>
                 </div>
                 <div>

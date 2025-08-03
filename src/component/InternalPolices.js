@@ -420,13 +420,13 @@ const InternalPolicies = () => {
                         member of ICAI or ICSI.
                       </li>
                     </ol>
-                    {/* <div className="mt-4 text-right">
+                    <div className="mt-4 text-right">
                       <p className="font-medium">
                         Mr. Abishek Kondagunta Venkatesh
                       </p>
                       <p>Place: Hyderabad</p>
                       <p>Date: June 28, 2025</p>
-                    </div> */}
+                    </div>
                   </div>
                 </div>
               </section>

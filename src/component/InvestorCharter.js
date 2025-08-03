@@ -47,7 +47,7 @@ const InvestorCharter = () => {
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
-       <HeaderTab />
+        <HeaderTab />
 
         {/* Main Content */}
         <main className="max-w-7xl mt-16 mx-auto px-0 py-8">
@@ -92,9 +92,7 @@ const InvestorCharter = () => {
                     Vision & Mission
                   </h2>
                   <div className="bg-gradient-to-r from-teal-50 to-blue-50 p-6 rounded-xl">
-                    <h3 className="text-2xl font-bold text-teal-800">
-                      Vision
-                    </h3>
+                    <h3 className="text-2xl font-bold text-teal-800">Vision</h3>
                     <p className="text-lg text-gray-700">
                       Invest with knowledge & safety.
                     </p>
@@ -305,14 +303,14 @@ const InvestorCharter = () => {
                         grievance on SMARTODR platform for its resolution
                         through online conciliation or arbitration.
                         <a
-                            href="https://smartodr.in/login"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-teal-600 hover:underline ml-2"
-                          >
-                            (https://smartodr.in/login){" "}
-                            <ExternalLink className="inline w-4 h-4" />
-                          </a>
+                          href="https://smartodr.in/login"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-teal-600 hover:underline ml-2"
+                        >
+                          (https://smartodr.in/login){" "}
+                          <ExternalLink className="inline w-4 h-4" />
+                        </a>
                       </p>
                     </div>
 
@@ -351,13 +349,82 @@ const InvestorCharter = () => {
                       "Right to Privacy and Confidentiality",
                       "Right to Transparent Practices",
                       "Right to fair and Equitable Treatment",
-                      "Right to Adequate Information",
-                      "Right to Initial and Continuing Disclosure",
-                      "Right to receive information about all the statutory and regulatory disclosures",
+                      "Right to Adequate Information"
+                    ].map((right, index) => (
+                      <div
+                        key={index}
+                        className="bg-white border border-gray-200 rounded-lg p-4 flex items-start space-x-3"
+                      >
+                        <CheckCircle className="w-5 h-5 text-teal-600 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700">{right}</span>
+                      </div>
+                    ))}
+                    <div className="bg-white border border-gray-200 rounded-lg p-4">
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="w-5 h-5 text-teal-600 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700 font-medium">
+                          Right to Initial and Continuing Disclosure
+                        </span>
+                      </div>
+
+                      {/* Sub-points container with indentation */}
+                      <div className="ml-8 mt-2 space-y-2">
+                        {[
+                          "Right to receive information about all the statutory and regulatory disclosures",
+                        ].map((right, index) => (
+                          <div
+                            key={index}
+                            className="flex items-start space-x-2"
+                          >
+                            <span className="text-gray-500">-</span>
+                            <span className="text-gray-700">{right}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    {[
                       "Right to Fair & True Advertisement",
                       "Right to Awareness about Service Parameters and Turnaround Times",
                       "Right to be informed of the timelines for each service",
                       "Right to be Heard and Satisfactory Grievance Redressal",
+                      "Right to have timely redressal",
+                      "Right to Exit from Financial product or service in accordance with the terms and conditions agreed with the research analyst",
+                      "Right to receive clear guidance and caution notice when dealing in Complex and High-Risk Financial Products and Services"
+                    ].map((right, index) => (
+                      <div
+                        key={index}
+                        className="bg-white border border-gray-200 rounded-lg p-4 flex items-start space-x-3"
+                      >
+                        <CheckCircle className="w-5 h-5 text-teal-600 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700">{right}</span>
+                      </div>
+                    ))}
+                    <div className="bg-white border border-gray-200 rounded-lg p-4">
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="w-5 h-5 text-teal-600 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700 font-medium">
+                          Additional Rights to vulnerable consumers
+                        </span>
+                      </div>
+
+                      {/* Sub-points container with indentation */}
+                      <div className="ml-8 mt-2 space-y-2">
+                        {[
+                          "Right to get access to services in a suitable manner even if differently abled",
+                        ].map((right, index) => (
+                          <div
+                            key={index}
+                            className="flex items-start space-x-2"
+                          >
+                            <span className="text-gray-500">-</span>
+                            <span className="text-gray-700">{right}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    {[
+                      "Right to provide feedback on the financial products and services used",
+                      "Right against coercive, unfair, and one-sided clauses in financial agreements",
                     ].map((right, index) => (
                       <div
                         key={index}
@@ -395,15 +462,15 @@ const InvestorCharter = () => {
                         Check for SEBI registration number.
                         <div className="mt-2 text-sm bg-white p-3 rounded-lg border border-gray-200">
                           Please refer to the list of all SEBI registered
-                          Research Analysts which is available on SEBI website in
-                          the following link:
+                          Research Analysts which is available on SEBI website
+                          in the following link:
                           <a
-                            href="https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=14"
+                            href="https://www.sebi.gov.in"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-teal-600 hover:underline ml-1"
                           >
-                            (https://www.sebi.gov.in/sebiweb/other/OtherAction.do?doRecognisedFpi=yes&intmId=14){" "}
+                            (https://www.sebi.gov.in){" "}
                             <ExternalLink className="inline w-4 h-4" />
                           </a>
                         </div>
@@ -492,11 +559,6 @@ const InvestorCharter = () => {
                   </h2>
 
                   <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-                    <h3 className="text-xl font-semibold text-teal-700 mb-2">
-                      Formats for investors complaints data to be disclosed
-                      monthly by RAs on their website/mobile application:
-                    </h3>
-
                     <p className="text-gray-700 mb-4">
                       Data for the month ending - July 2025
                     </p>
@@ -524,7 +586,7 @@ const InvestorCharter = () => {
                               Total Pending#
                             </th>
                             <th className="border border-gray-200 px-4 py-2 text-left text-sm font-medium text-gray-700">
-                              Pending complaints 3months
+                              {`Pending complaints > 3 months`}
                             </th>
                             <th className="border border-gray-200 px-4 py-2 text-left text-sm font-medium text-gray-700">
                               Average Resolution time^ (in days)
@@ -539,12 +601,24 @@ const InvestorCharter = () => {
                             <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
                               Directly from Investors
                             </td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
                           </tr>
                           <tr>
                             <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
@@ -553,12 +627,24 @@ const InvestorCharter = () => {
                             <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
                               SEBI (SCORES)
                             </td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
                           </tr>
                           <tr>
                             <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
@@ -567,24 +653,48 @@ const InvestorCharter = () => {
                             <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
                               Other Sources (if any)
                             </td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
                           </tr>
                           <tr className="font-medium">
                             <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700"></td>
                             <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
                               Grand Total
                             </td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
                           </tr>
                         </tbody>
                       </table>
@@ -656,20 +766,36 @@ const InvestorCharter = () => {
                             <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
                               July, 2025
                             </td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
                           </tr>
                           <tr className="font-medium">
                             <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700"></td>
                             <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
                               Grand Total
                             </td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
                           </tr>
                         </tbody>
                       </table>
@@ -724,20 +850,36 @@ const InvestorCharter = () => {
                             <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
                               2025-26
                             </td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
                           </tr>
                           <tr className="font-medium">
                             <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700"></td>
                             <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
                               Grand Total
                             </td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
-                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              0
+                            </td>
                           </tr>
                         </tbody>
                       </table>

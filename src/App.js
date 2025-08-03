@@ -10,6 +10,7 @@ import InternalPolicies from "./component/InternalPolices";
 import CodeOfConduct from "./component/CodeOfConduct";
 import TermsAndConditions from "./component/TermsAndCondition";
 import ContactUs from "./component/ContactUs";
+import ComplaintData from "./component/ComplaintData";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
   <Route path="/internalPolicies" element={<InternalPolicies />} />
   <Route path="/codeOfConduct" element={<CodeOfConduct />} />
   <Route path="/investorCharter" element={<InvestorCharter />} />
+  <Route path="/complaintData" element={<ComplaintData />} />
   <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
   <Route path="/termsAndConditions" element={<TermsAndConditions />} />
   <Route path="/refundPolicy" element={<RefundPolicy />} />

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import Logo from "./image/AKVLogo.png";
 
@@ -6,6 +6,7 @@ const HeaderTab = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [complianceOpen, setComplianceOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const headerRef = useRef(null);
 
   // Scroll handler
   useEffect(() => {
@@ -15,6 +16,23 @@ const HeaderTab = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      console.log("dmlkernk");
+      if (headerRef.current && !headerRef.current.contains(event.target)) {
+        setComplianceOpen(false);
+      }
+    };
+
+    if (complianceOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [complianceOpen]);
 
   const AnimatedLogo = () => (
     <div className="flex flex-col">
@@ -35,6 +53,7 @@ const HeaderTab = () => {
 
   return (
     <header
+      ref={headerRef}
       className="fixed top-0 w-full z-50 transition-all duration-300
         bg-white/95 backdrop-blur-md shadow-lg"
     >
@@ -118,6 +137,12 @@ const HeaderTab = () => {
                   >
                     Terms & Conditions
                   </a>
+                  <a
+                    href="/complaintData"
+                    className="block px-3 lg:px-4 py-2 text-xs lg:text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    Complaint Data
+                  </a>
                 </div>
               )}
             </div>
@@ -157,7 +182,7 @@ const HeaderTab = () => {
               Home
             </a>
             <a
-              href="#services"
+              href="https://superprofile.bio/akvequityresearch"
               className="block px-3 py-2 text-sm font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -224,6 +249,12 @@ const HeaderTab = () => {
                     className="block px-3 py-2 text-xs text-gray-700 hover:bg-gray-100"
                   >
                     Terms & Conditions
+                  </a>
+                  <a
+                    href="/complaintData"
+                    className="block px-3 lg:px-4 py-2 text-xs lg:text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    Complaint Data
                   </a>
                 </div>
               )}
