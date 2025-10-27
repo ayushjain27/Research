@@ -194,7 +194,7 @@ const ComplaintData = () => {
                           </tr>
                           <tr>
                             <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
-                              1
+                              2
                             </td>
                             <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
                               August, 2025
@@ -206,7 +206,7 @@ const ComplaintData = () => {
                           </tr>
                           <tr>
                             <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
-                              1
+                              3
                             </td>
                             <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
                               September, 2025

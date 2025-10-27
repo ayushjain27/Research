@@ -560,7 +560,7 @@ const InvestorCharter = () => {
 
                   <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
                     <p className="text-gray-700 mb-4">
-                      Data for the month ending - July 2025
+                      Data for the month ending - September 2025
                     </p>
 
                     <div className="overflow-x-auto">
@@ -778,6 +778,30 @@ const InvestorCharter = () => {
                             <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
                               0
                             </td>
+                          </tr>
+                          <tr>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              2
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              August, 2025
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                          </tr>
+                          <tr>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              3
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              September, 2025
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
                           </tr>
                           <tr className="font-medium">
                             <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700"></td>
