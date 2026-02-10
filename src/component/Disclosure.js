@@ -59,7 +59,7 @@ const StandardDisclosures = () => {
                   <p>
                     Abishek Kondagunta Venkatesh is a SEBI registered Research
                     Analyst with registration no. <strong>INH000022066</strong>{" "}
-                    valid from July 28, 2025 – July 27, 2030.
+                    valid from July 28, 2025 – Perpetual.
                   </p>
                   <p>
                     The research analyst is engaged in offering research and

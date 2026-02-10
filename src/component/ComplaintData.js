@@ -29,7 +29,7 @@ const ComplaintData = () => {
                 <div className="space-y-4">
                   <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
                     <p className="text-gray-700 mb-4">
-                      Data for the month ending - September 2025
+                      Data for the month ending - January 2026
                     </p>
 
                     <div className="overflow-x-auto">
@@ -210,6 +210,54 @@ const ComplaintData = () => {
                             </td>
                             <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
                               September, 2025
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                          </tr>
+                          <tr>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              4
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              October, 2025
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                          </tr>
+                          <tr>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              5
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              November, 2025
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                          </tr>
+                          <tr>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              6
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              December, 2025
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                          </tr>
+                          <tr>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              7
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              January, 2026
                             </td>
                             <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
                             <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
