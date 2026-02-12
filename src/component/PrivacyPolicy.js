@@ -1,5 +1,4 @@
 import React from "react";
-import { ArrowRight } from "lucide-react";
 import HeaderTab from "./HeaderTab";
 
 const PrivacyPolicy = () => {
