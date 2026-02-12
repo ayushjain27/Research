@@ -70,7 +70,7 @@ const HeaderTab = () => {
               Home
             </a>
             <a
-              href="https://superprofile.bio/akvequityresearch"
+              href="https://linktr.ee/akvequityresearch"
               className="text-gray-700 hover:text-teal-600 transition-colors duration-200 font-medium text-sm lg:text-base"
             >
               Research Services
@@ -182,7 +182,7 @@ const HeaderTab = () => {
               Home
             </a>
             <a
-              href="https://superprofile.bio/akvequityresearch"
+              href="https://linktr.ee/akvequityresearch"
               className="block px-3 py-2 text-sm font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50"
               onClick={() => setMobileMenuOpen(false)}
             >
