@@ -1,14 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useRef, useState } from "react";
 import {
-  Mail,
-  Phone,
   ExternalLink,
   CheckCircle,
-  X,
-  Menu,
-  ChevronDown,
-  ArrowRight,
 } from "lucide-react";
 import HeaderTab from "./HeaderTab";
 

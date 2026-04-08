@@ -1,34 +1,21 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect } from "react";
 import {
   TrendingUp,
   BarChart3,
-  Users,
-  Award,
   CheckCircle,
-  ArrowRight,
   Phone,
   Mail,
   MapPin,
-  DollarSign,
   PieChart,
   LineChart,
   FileText,
 } from "lucide-react";
 import HeaderTab from "./HeaderTab";
 import Logo from "./image/AKVLogo.png";
-import Image from "./image/stock market.webp";
 
 const AKVHomepage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    experience: "",
-    message: "",
-  });
-  const [formErrors, setFormErrors] = useState({});
 
   // Scroll handler
   useEffect(() => {
