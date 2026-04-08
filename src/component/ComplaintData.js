@@ -29,7 +29,7 @@ const ComplaintData = () => {
                 <div className="space-y-4">
                   <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
                     <p className="text-gray-700 mb-4">
-                      Data for the month ending - January 2026
+                      Data for the month ending - March 2026
                     </p>
 
                     <div className="overflow-x-auto">
@@ -264,6 +264,30 @@ const ComplaintData = () => {
                             <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
                             <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
                           </tr>
+                          <tr>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              8
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              February, 2026
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                          </tr>
+                          <tr>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              9
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              March, 2026
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                          </tr>
                           <tr className="font-medium">
                             <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700"></td>
                             <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
@@ -323,6 +347,18 @@ const ComplaintData = () => {
                           <tr>
                             <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
                               1
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              2026-27
+                            </td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">0</td>
+                          </tr>
+                          <tr>
+                            <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
+                              2
                             </td>
                             <td className="border border-gray-200 px-4 py-2 text-sm text-gray-700">
                               2025-26
