@@ -3,19 +3,9 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import Logo from "./image/AKVLogo.png";
 
 const HeaderTab = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [complianceOpen, setComplianceOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const headerRef = useRef(null);
-
-  // Scroll handler
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event) => {

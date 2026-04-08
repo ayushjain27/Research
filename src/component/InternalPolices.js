@@ -1,18 +1,11 @@
 import React, { useRef, useState } from "react";
 import {
-  ExternalLink,
   CheckCircle,
-  X,
-  Menu,
-  ChevronDown,
-  ArrowRight,
 } from "lucide-react";
 import HeaderTab from "./HeaderTab";
 
 const InternalPolicies = () => {
   const [activeTab, setActiveTab] = useState("introduction");
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [complianceOpen, setComplianceOpen] = useState(false);
 
   // Refs for each section
   const introductionRef = useRef(null);
