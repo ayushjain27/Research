@@ -4,9 +4,6 @@ import {
   TrendingUp,
   BarChart3,
   CheckCircle,
-  Phone,
-  Mail,
-  MapPin,
   PieChart,
   LineChart,
   FileText,
@@ -31,7 +28,6 @@ const AKVHomepage = () => {
   const homeRef = useRef(null);
   const servicesRef = useRef(null);
   const teamRef = useRef(null);
-  const contactRef = useRef(null);
   const investorCharterRef = useRef(null);
   const internalPoliciesRef = useRef(null);
   const standardDisclosuresRef = useRef(null);
