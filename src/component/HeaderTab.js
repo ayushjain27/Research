@@ -171,14 +171,6 @@ const HeaderTab = ({
             </div>
             <button
               onClick={() => {
-                if (onTeamClick) onTeamClick();
-              }}
-              className="text-gray-700 hover:text-teal-600 transition-colors duration-200 font-medium text-sm lg:text-base"
-            >
-              Team
-            </button>
-            <button
-              onClick={() => {
                 if (onContactClick) onContactClick();
               }}
               className="text-gray-700 hover:text-teal-600 transition-colors duration-200 font-medium text-sm lg:text-base"
