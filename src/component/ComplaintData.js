@@ -190,9 +190,9 @@ const ComplaintDataContent = () => {
 
           {/* Trend of monthly disposal of complaints */}
           <div className="bg-white border border-gray-200 rounded-xl p-4 md:p-6 shadow-sm">
-            <h3 className="text-base md:text-lg font-semibold text-teal-700 mb-3">
+            <h2 className="text-base md:text-lg font-semibold text-teal-700 mb-3">
               Trend of monthly disposal of complaints
-            </h3>
+            </h2>
 
             <div className="overflow-x-auto">
               <table className="min-w-full border border-gray-200 text-xs md:text-sm">

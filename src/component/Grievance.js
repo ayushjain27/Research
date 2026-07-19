@@ -70,7 +70,7 @@ const GrievanceRedressalContent = () => {
                 <td className="border border-gray-200 px-3 py-2">
                   <a
                     href="mailto:abishekkvenkatesh@outlook.com"
-                    className="text-teal-600 hover:underline"
+                    className="hover:underline text-[#222222] bg-white"
                   >
                     abishekkvenkatesh@outlook.com
                   </a>
@@ -98,7 +98,7 @@ const GrievanceRedressalContent = () => {
                 <td className="border border-gray-200 px-3 py-2">
                   <a
                     href="mailto:abishekkvenkatesh@outlook.com"
-                    className="text-teal-600 hover:underline"
+                    className="hover:underline text-[#222222] bg-white"
                   >
                     abishekkvenkatesh@outlook.com
                   </a>
@@ -126,7 +126,7 @@ const GrievanceRedressalContent = () => {
                 <td className="border border-gray-200 px-3 py-2">
                   <a
                     href="mailto:abishekkvenkatesh@outlook.com"
-                    className="text-teal-600 hover:underline"
+                    className="hover:underline text-[#222222] bg-white"
                   >
                     abishekkvenkatesh@outlook.com
                   </a>
@@ -154,7 +154,7 @@ const GrievanceRedressalContent = () => {
                 <td className="border border-gray-200 px-3 py-2">
                   <a
                     href="mailto:abishekkvenkatesh@outlook.com"
-                    className="text-teal-600 hover:underline"
+                    className="hover:underline text-[#222222] bg-white"
                   >
                     abishekkvenkatesh@outlook.com
                   </a>
@@ -182,7 +182,7 @@ const GrievanceRedressalContent = () => {
                 <td className="border border-gray-200 px-3 py-2">
                   <a
                     href="mailto:abishekkvenkatesh@outlook.com"
-                    className="text-teal-600 hover:underline"
+                    className="hover:underline text-[#222222] bg-white"
                   >
                     abishekkvenkatesh@outlook.com
                   </a>
