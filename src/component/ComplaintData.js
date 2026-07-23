@@ -29,7 +29,7 @@ const ComplaintDataContent = () => {
 
             <div
               role="region"
-              aria-label="Complaint Data contact information table"
+              aria-label="Monthly complaint data table - scroll horizontally to view all columns"
               tabIndex="0"
               className="overflow-x-auto"
             >
@@ -204,7 +204,13 @@ const ComplaintDataContent = () => {
               Trend of monthly disposal of complaints
             </h2>
 
-            <div className="overflow-x-auto">
+            {/* FIXED: Added role, aria-label, and tabIndex */}
+            <div
+              role="region"
+              aria-label="Trend of monthly disposal of complaints table - scroll horizontally to view all columns"
+              tabIndex="0"
+              className="overflow-x-auto"
+            >
               <table className="min-w-full border border-gray-200 text-xs md:text-sm">
                 <thead className="bg-gray-50">
                   <tr>
@@ -304,7 +310,13 @@ const ComplaintDataContent = () => {
               Trend of annual disposal of complaints
             </h3>
 
-            <div className="overflow-x-auto">
+            {/* FIXED: Added role, aria-label, and tabIndex */}
+            <div
+              role="region"
+              aria-label="Trend of annual disposal of complaints table - scroll horizontally to view all columns"
+              tabIndex="0"
+              className="overflow-x-auto"
+            >
               <table className="min-w-full border border-gray-200 text-xs md:text-sm">
                 <thead className="bg-gray-50">
                   <tr>
