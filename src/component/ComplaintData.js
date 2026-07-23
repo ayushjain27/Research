@@ -19,7 +19,7 @@ const ComplaintDataContent = () => {
         <div className="space-y-6">
           <div className="bg-white border border-gray-200 rounded-xl p-4 md:p-6 shadow-sm">
             <p className="text-gray-700 mb-4 text-sm md:text-base">
-              Data for the month ending - April 2026
+              Data for the month ending - June 2026
             </p>
 
             <div className="overflow-x-auto">
@@ -230,6 +230,8 @@ const ComplaintDataContent = () => {
                     "February, 2026",
                     "March, 2026",
                     "April, 2026",
+                    "May, 2026",
+                    "June, 2026"
                   ].map((month, index) => (
                     <tr key={index}>
                       <td className="border border-gray-200 px-2 md:px-4 py-2">

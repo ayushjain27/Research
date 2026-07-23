@@ -400,7 +400,7 @@ const InternalPoliciesContent = () => {
                     Mr. Abishek Kondagunta Venkatesh
                   </p>
                   <p>Place: Hyderabad</p>
-                  <p>Date: June 28, 2025</p>
+                  <p>Date: July 28, 2025</p>
                 </div>
               </div>
             </div>
