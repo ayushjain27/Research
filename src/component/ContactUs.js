@@ -16,6 +16,7 @@ const ContactUsContent = () => {
       {/* Content Sections */}
       <div className="p-4 md:p-6">
         {/* Contact Details Section */}
+        <main role="main">
         <section className="bg-gradient-to-r from-gray-50 to-gray-100 p-4 md:p-6 rounded-lg">
           <h2 className="text-lg md:text-xl font-bold text-gray-800 mb-4">
             Customer Care
@@ -54,7 +55,7 @@ const ContactUsContent = () => {
                   <div className="flex flex-wrap gap-2 mt-2">
                     <a
                       href={`tel:${phoneNumber}`}
-                      className="px-3 py-1.5 md:px-4 md:py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors flex items-center gap-2 text-xs md:text-sm"
+                      className="px-3 py-1.5 md:px-4 md:py-2 rounded-lg hover:bg-teal-700 transition-colors flex items-center gap-2 text-xs md:text-sm text-[#222222] bg-white"
                     >
                       <Phone className="w-3 h-3 md:w-4 md:h-4" />
                       Call Now
@@ -63,7 +64,7 @@ const ContactUsContent = () => {
                       href={whatsappLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-3 py-1.5 md:px-4 md:py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors flex items-center gap-2 text-xs md:text-sm"
+                      className="px-3 py-1.5 md:px-4 md:py-2 rounded-lg hover:bg-green-700 transition-colors flex items-center gap-2 text-xs md:text-sm text-[#222222] bg-white"
                     >
                       <svg
                         className="w-3 h-3 md:w-4 md:h-4 fill-current"
@@ -91,7 +92,7 @@ const ContactUsContent = () => {
                   </h3>
                   <a
                     href={mailToLink}
-                    className="text-teal-600 hover:underline text-xs md:text-sm break-all"
+                    className="text-teal-600 hover:underline text-xs md:text-sm break-all text-[#222222] bg-white"
                   >
                     abishekkvenkatesh@outlook.com
                   </a>
@@ -116,6 +117,7 @@ const ContactUsContent = () => {
             </div>
           </div>
         </section>
+        </main>
       </div>
 
       {/* Footer Note */}
