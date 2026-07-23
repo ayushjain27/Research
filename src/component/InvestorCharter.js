@@ -47,7 +47,7 @@ const InvestorCharterContent = () => {
 
       {/* Tabs */}
       <div className="border-b border-gray-200 bg-white sticky top-0 z-10">
-        <nav className="flex overflow-x-auto">
+        <div className="flex space-x-1 px-4">
           <div className="flex space-x-1 px-4">
             {tabs.map((tab) => (
               <button
@@ -63,13 +63,13 @@ const InvestorCharterContent = () => {
               </button>
             ))}
           </div>
-        </nav>
+        </div>
       </div>
 
       {/* Content Area - All sections in one scrollable view */}
       <div className="p-6 md:p-8 space-y-8 max-h-[600px] overflow-y-auto">
         {/* Vision & Mission Section */}
-        <main role="main">
+        <div>
           <section ref={visionRef} className="scroll-mt-24">
             <div className="space-y-4">
               <h2 className="text-2xl font-bold text-gray-800 mb-4">
@@ -514,7 +514,12 @@ const InvestorCharterContent = () => {
                   Data for the month ending - June 2026
                 </p>
 
-                <div className="overflow-x-auto">
+                <div
+                  role="region"
+                  aria-label="Investor Charter contact information table"
+                  tabIndex="0"
+                  className="overflow-x-auto"
+                >
                   <table className="min-w-full border border-gray-200 text-sm">
                     <thead className="bg-gray-50">
                       <tr>
@@ -599,7 +604,7 @@ const InvestorCharterContent = () => {
               </div>
             </div>
           </section>
-        </main>
+        </div>
       </div>
 
       {/* Footer Note */}

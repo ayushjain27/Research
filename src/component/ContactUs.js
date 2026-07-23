@@ -16,7 +16,7 @@ const ContactUsContent = () => {
       {/* Content Sections */}
       <div className="p-4 md:p-6">
         {/* Contact Details Section */}
-        <main role="main">
+        <div>
         <section className="bg-gradient-to-r from-gray-50 to-gray-100 p-4 md:p-6 rounded-lg">
           <h2 className="text-lg md:text-xl font-bold text-gray-800 mb-4">
             Customer Care
@@ -117,7 +117,7 @@ const ContactUsContent = () => {
             </div>
           </div>
         </section>
-        </main>
+        </div>
       </div>
 
       {/* Footer Note */}

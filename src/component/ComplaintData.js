@@ -14,7 +14,12 @@ const ComplaintDataContent = () => {
       </div>
 
       {/* Content Area */}
-      <div className="p-4 md:p-6 space-y-6 max-h-[600px] overflow-y-auto">
+      <div
+        role="region"
+        aria-label="Complaint Data content"
+        tabIndex="0"
+        className="p-4 md:p-6 space-y-6 max-h-[600px] overflow-y-auto"
+      >
         {/* Complaint Data Section */}
         <div className="space-y-6">
           <div className="bg-white border border-gray-200 rounded-xl p-4 md:p-6 shadow-sm">
@@ -22,7 +27,12 @@ const ComplaintDataContent = () => {
               Data for the month ending - June 2026
             </p>
 
-            <div className="overflow-x-auto">
+            <div
+              role="region"
+              aria-label="Complaint Data contact information table"
+              tabIndex="0"
+              className="overflow-x-auto"
+            >
               <table className="min-w-full border border-gray-200 text-xs md:text-sm">
                 <thead className="bg-gray-50">
                   <tr>
@@ -231,7 +241,7 @@ const ComplaintDataContent = () => {
                     "March, 2026",
                     "April, 2026",
                     "May, 2026",
-                    "June, 2026"
+                    "June, 2026",
                   ].map((month, index) => (
                     <tr key={index}>
                       <td className="border border-gray-200 px-2 md:px-4 py-2">
@@ -290,9 +300,9 @@ const ComplaintDataContent = () => {
 
           {/* Trend of annual disposal of complaints */}
           <div className="bg-white border border-gray-200 rounded-xl p-4 md:p-6 shadow-sm">
-            <h4 className="text-base md:text-lg font-semibold text-teal-700 mb-3">
+            <h3 className="text-base md:text-lg font-semibold text-teal-700 mb-3">
               Trend of annual disposal of complaints
-            </h4>
+            </h3>
 
             <div className="overflow-x-auto">
               <table className="min-w-full border border-gray-200 text-xs md:text-sm">

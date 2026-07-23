@@ -15,7 +15,12 @@ const CodeOfConductContent = () => {
       </div>
 
       {/* Scrollable Content Area */}
-      <div className="p-4 md:p-6 space-y-6 max-h-[600px] overflow-y-auto">
+      <div
+        role="region"
+        aria-label="Code of conduct content"
+        tabIndex="0"
+        className="p-4 md:p-6 space-y-6 max-h-[600px] overflow-y-auto"
+      >
         {/* Introduction */}
         <div>
           <p className="text-gray-700 text-sm md:text-base">

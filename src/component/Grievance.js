@@ -12,7 +12,12 @@ const GrievanceRedressalContent = () => {
       </div>
 
       {/* Scrollable Content Area */}
-      <div className="p-4 md:p-6 space-y-6 max-h-[600px] overflow-y-auto">
+      <div
+        role="region"
+        aria-label="Grievance content"
+        tabIndex="0"
+        className="p-4 md:p-6 space-y-6 max-h-[600px] overflow-y-auto"
+      >
         {/* Steps Section */}
         <div>
           <h2 className="text-lg md:text-xl font-semibold text-gray-800 mb-3">
@@ -28,7 +33,12 @@ const GrievanceRedressalContent = () => {
         </div>
 
         {/* Contact Table */}
-        <div className="overflow-x-auto">
+        <div
+          role="region"
+          aria-label="Grievance redressal contact information table"
+          tabIndex="0"
+          className="overflow-x-auto"
+        >
           <table className="min-w-full border border-gray-200 text-sm">
             <thead className="bg-gray-50">
               <tr>

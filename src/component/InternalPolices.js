@@ -40,7 +40,7 @@ const InternalPoliciesContent = () => {
 
       {/* Tabs */}
       <div className="border-b border-gray-200 bg-white sticky top-0 z-10">
-        <nav className="flex overflow-x-auto">
+        <div className="flex space-x-1 px-4">
           <div className="flex space-x-1 px-4">
             {tabs.map((tab) => (
               <button
@@ -56,13 +56,18 @@ const InternalPoliciesContent = () => {
               </button>
             ))}
           </div>
-        </nav>
+        </div>
       </div>
 
       {/* Content Area - All sections in one scrollable view */}
-      <div className="p-4 md:p-6 space-y-6 max-h-[600px] overflow-y-auto">
+      <div
+        role="region"
+        aria-label="Internal policies content"
+        tabIndex="0"
+        className="p-4 md:p-6 space-y-6 max-h-[600px] overflow-y-auto"
+      >
         {/* Introduction Section */}
-        <main role="main">
+        <div>
           <section ref={introductionRef} className="scroll-mt-24">
             <div className="space-y-2">
               <h2 className="text-xl font-bold text-gray-800 mb-2">
@@ -405,7 +410,7 @@ const InternalPoliciesContent = () => {
               </div>
             </div>
           </section>
-        </main>
+        </div>
       </div>
 
       {/* Footer Note */}

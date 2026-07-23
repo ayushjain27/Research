@@ -187,6 +187,11 @@ const HeaderTab = ({
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="text-gray-700 hover:text-[#222222] focus:outline-none"
+              aria-label={
+                mobileMenuOpen
+                  ? "Close navigation menu"
+                  : "Open navigation menu"
+              }
             >
               {mobileMenuOpen ? (
                 <X className="w-5 h-5" />

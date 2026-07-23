@@ -15,11 +15,11 @@ const TermsAndConditionsContent = () => {
       <div
         role="region"
         tabindex="0"
-        aria-label="Scrollable content area"
+        aria-label="Scrollable Terms and Conditions Content"
         className="p-4 md:p-6 space-y-4 max-h-[600px] overflow-y-auto"
       >
         {/* Agreement Section */}
-        <main role="main">
+        <div>
           <section className="bg-gradient-to-r from-gray-50 to-gray-100 p-4 md:p-6 rounded-lg">
             <h2 className="text-lg md:text-xl font-bold text-gray-800 mb-2">
               Agreement
@@ -442,7 +442,7 @@ const TermsAndConditionsContent = () => {
               </p>
             </div>
           </section>
-        </main>
+        </div>
       </div>
 
       {/* Footer Note */}
