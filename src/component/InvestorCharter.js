@@ -245,7 +245,7 @@ const InvestorCharterContent = () => {
                         href="https://scores.sebi.gov.in"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-teal-600 hover:underline ml-2"
+                        className="text-[#222222] hover:underline ml-2"
                       >
                         (https://scores.sebi.gov.in){" "}
                         <ExternalLink className="inline w-4 h-4" />
@@ -276,7 +276,7 @@ const InvestorCharterContent = () => {
                       href="https://smartodr.in/login"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-teal-600 hover:underline ml-2"
+                      className="text-[#222222] hover:underline ml-2"
                     >
                       (https://smartodr.in/login){" "}
                       <ExternalLink className="inline w-4 h-4" />
@@ -325,13 +325,13 @@ const InvestorCharterContent = () => {
                     key={index}
                     className="bg-white border border-gray-200 rounded-lg p-4 flex items-start space-x-3"
                   >
-                    <CheckCircle className="w-5 h-5 text-teal-600 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-[#222222] mt-0.5 flex-shrink-0" />
                     <span className="text-gray-700">{right}</span>
                   </div>
                 ))}
                 <div className="bg-white border border-gray-200 rounded-lg p-4">
                   <div className="flex items-start space-x-3">
-                    <CheckCircle className="w-5 h-5 text-teal-600 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-[#222222] mt-0.5 flex-shrink-0" />
                     <span className="text-gray-700 font-medium">
                       Right to Initial and Continuing Disclosure
                     </span>
@@ -359,13 +359,13 @@ const InvestorCharterContent = () => {
                     key={index}
                     className="bg-white border border-gray-200 rounded-lg p-4 flex items-start space-x-3"
                   >
-                    <CheckCircle className="w-5 h-5 text-teal-600 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-[#222222] mt-0.5 flex-shrink-0" />
                     <span className="text-gray-700">{right}</span>
                   </div>
                 ))}
                 <div className="bg-white border border-gray-200 rounded-lg p-4">
                   <div className="flex items-start space-x-3">
-                    <CheckCircle className="w-5 h-5 text-teal-600 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-[#222222] mt-0.5 flex-shrink-0" />
                     <span className="text-gray-700 font-medium">
                       Additional Rights to vulnerable consumers
                     </span>
@@ -388,7 +388,7 @@ const InvestorCharterContent = () => {
                     key={index}
                     className="bg-white border border-gray-200 rounded-lg p-4 flex items-start space-x-3"
                   >
-                    <CheckCircle className="w-5 h-5 text-teal-600 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-[#222222] mt-0.5 flex-shrink-0" />
                     <span className="text-gray-700">{right}</span>
                   </div>
                 ))}
@@ -423,7 +423,7 @@ const InvestorCharterContent = () => {
                         href="https://www.sebi.gov.in"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-teal-600 hover:underline ml-1"
+                        className="text-[#222222] hover:underline ml-1"
                       >
                         (https://www.sebi.gov.in){" "}
                         <ExternalLink className="inline w-4 h-4" />

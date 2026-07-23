@@ -349,7 +349,7 @@ const RefundPolicyContent = () => {
                   href="http://akvequityresearch.com/refundpolicy"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-teal-600 hover:underline"
+                  className="text-[#222222] hover:underline"
                 >
                   https://akvequityresearch.com/refundpolicy
                 </a>{" "}

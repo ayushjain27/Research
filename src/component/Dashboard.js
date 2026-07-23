@@ -211,7 +211,7 @@ const AKVHomepage = () => {
                   >
                     <div className="flex items-start space-x-4">
                       <div className="bg-teal-100 p-3 rounded-xl group-hover:bg-teal-200 transition-colors duration-300">
-                        <Icon className="w-8 h-8 text-teal-600" />
+                        <Icon className="w-8 h-8 text-[#222222]" />
                       </div>
                       <div className="flex-1">
                         <h3 className="text-2xl font-semibold text-gray-900 mb-3">
@@ -223,7 +223,7 @@ const AKVHomepage = () => {
                         <ul className="space-y-2">
                           {service.features.map((feature, i) => (
                             <li key={i} className="flex items-center space-x-2">
-                              <CheckCircle className="w-4 h-4 text-teal-600 flex-shrink-0" />
+                              <CheckCircle className="w-4 h-4 text-[#222222] flex-shrink-0" />
                               <span className="text-gray-700 text-sm">
                                 {feature}
                               </span>
@@ -271,7 +271,7 @@ const AKVHomepage = () => {
                   </p>
                 </div>
                 <div className="bg-white p-4 rounded-xl shadow-sm">
-                  <div className="text-teal-600 font-bold text-lg mb-2 text-[#222222] bg-white">
+                  <div className="font-bold text-lg mb-2 text-[#222222] bg-white">
                     3. Data Validation
                   </div>
                   <p className="text-sm text-gray-600">

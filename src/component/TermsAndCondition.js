@@ -219,7 +219,7 @@ const TermsAndConditionsContent = () => {
                     href="https://www.akvequityresearch.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-teal-600 hover:underline flex items-center mt-1"
+                    className="text-[#222222] hover:underline flex items-center mt-1"
                   >
                     www.akvequityresearch.com
                     <ExternalLink className="w-4 h-4 ml-1" />
@@ -343,7 +343,7 @@ const TermsAndConditionsContent = () => {
                         href="https://scores.sebi.gov.in"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-teal-600 hover:underline"
+                        className="text-[#222222] hover:underline"
                       >
                         www.scores.sebi.gov.in
                         <ExternalLink className="inline w-4 h-4 ml-1" />
@@ -356,7 +356,7 @@ const TermsAndConditionsContent = () => {
                         href="https://smartodr.in"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-teal-600 hover:underline"
+                        className="text-[#222222] hover:underline"
                       >
                         https://smartodr.in
                         <ExternalLink className="inline w-4 h-4 ml-1" />
@@ -434,7 +434,7 @@ const TermsAndConditionsContent = () => {
                   href="https://www.akvequityresearch.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-teal-600 hover:underline"
+                  className="text-[#222222] hover:underline"
                 >
                   https://www.akvequityresearch.com
                   <ExternalLink className="inline w-4 h-4 ml-1" />

@@ -92,7 +92,7 @@ const ContactUsContent = () => {
                   </h3>
                   <a
                     href={mailToLink}
-                    className="text-teal-600 hover:underline text-xs md:text-sm break-all text-[#222222] bg-white"
+                    className="hover:underline text-xs md:text-sm break-all text-[#222222] bg-white"
                   >
                     abishekkvenkatesh@outlook.com
                   </a>

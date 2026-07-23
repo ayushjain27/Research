@@ -133,20 +133,20 @@ const HeaderTab = ({
               onClick={() => {
                 if (onHomeClick) onHomeClick();
               }}
-              className="text-gray-700 hover:text-teal-600 transition-colors duration-200 font-medium text-sm lg:text-base"
+              className="text-gray-700 hover:text-[#222222] transition-colors duration-200 font-medium text-sm lg:text-base"
             >
               Home
             </button>
             <a
               href="https://akvequityresearch.revlu.in/tg/f34d50f5d117aec7"
-              className="text-gray-700 hover:text-teal-600 transition-colors duration-200 font-medium text-sm lg:text-base"
+              className="text-gray-700 hover:text-[#222222] transition-colors duration-200 font-medium text-sm lg:text-base"
             >
               Research Services
             </a>
             <div className="relative">
               <button
                 onClick={() => setComplianceOpen(!complianceOpen)}
-                className="flex items-center text-gray-700 hover:text-teal-600 transition-colors duration-200 font-medium text-sm lg:text-base"
+                className="flex items-center text-gray-700 hover:text-[#222222] transition-colors duration-200 font-medium text-sm lg:text-base"
               >
                 RA Compliance
                 <ChevronDown
@@ -164,7 +164,7 @@ const HeaderTab = ({
                         if (item.onClick) item.onClick();
                         setComplianceOpen(false);
                       }}
-                      className="block w-full text-left px-3 lg:px-4 py-2 text-xs lg:text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition-colors duration-200"
+                      className="block w-full text-left px-3 lg:px-4 py-2 text-xs lg:text-sm text-gray-700 hover:bg-teal-50 hover:text-[#222222] transition-colors duration-200"
                     >
                       {item.name}
                     </button>
@@ -176,7 +176,7 @@ const HeaderTab = ({
               onClick={() => {
                 if (onContactClick) onContactClick();
               }}
-              className="text-gray-700 hover:text-teal-600 transition-colors duration-200 font-medium text-sm lg:text-base"
+              className="text-gray-700 hover:text-[#222222] transition-colors duration-200 font-medium text-sm lg:text-base"
             >
               Contact Us
             </button>
@@ -186,7 +186,7 @@ const HeaderTab = ({
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-gray-700 hover:text-teal-600 focus:outline-none"
+              className="text-gray-700 hover:text-[#222222] focus:outline-none"
             >
               {mobileMenuOpen ? (
                 <X className="w-5 h-5" />
@@ -207,7 +207,7 @@ const HeaderTab = ({
                 if (onHomeClick) onHomeClick();
                 closeMobileMenu();
               }}
-              className="block w-full text-left px-3 py-2 text-sm font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50 rounded-md"
+              className="block w-full text-left px-3 py-2 text-sm font-medium text-gray-700 hover:text-[#222222] hover:bg-gray-50 rounded-md"
             >
               Home
             </button>
@@ -216,14 +216,14 @@ const HeaderTab = ({
                 if (onServicesClick) onServicesClick();
                 closeMobileMenu();
               }}
-              className="block w-full text-left px-3 py-2 text-sm font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50 rounded-md"
+              className="block w-full text-left px-3 py-2 text-sm font-medium text-gray-700 hover:text-[#222222] hover:bg-gray-50 rounded-md"
             >
               Research Services
             </button>
             <div className="px-3 py-2">
               <button
                 onClick={() => setComplianceOpen(!complianceOpen)}
-                className="flex items-center text-sm font-medium text-gray-700 hover:text-teal-600 w-full"
+                className="flex items-center text-sm font-medium text-gray-700 hover:text-[#222222] w-full"
               >
                 RA Compliance
                 <ChevronDown
@@ -241,7 +241,7 @@ const HeaderTab = ({
                         if (item.onClick) item.onClick();
                         closeMobileMenu();
                       }}
-                      className="block w-full text-left px-3 py-2 text-xs text-gray-700 hover:text-teal-600 hover:bg-gray-50 rounded-md"
+                      className="block w-full text-left px-3 py-2 text-xs text-gray-700 hover:text-[#222222] hover:bg-gray-50 rounded-md"
                     >
                       {item.name}
                     </button>
@@ -254,7 +254,7 @@ const HeaderTab = ({
                 if (onTeamClick) onTeamClick();
                 closeMobileMenu();
               }}
-              className="block w-full text-left px-3 py-2 text-sm font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50 rounded-md"
+              className="block w-full text-left px-3 py-2 text-sm font-medium text-gray-700 hover:text-[#222222] hover:bg-gray-50 rounded-md"
             >
               Team
             </button>
@@ -263,7 +263,7 @@ const HeaderTab = ({
                 if (onContactClick) onContactClick();
                 closeMobileMenu();
               }}
-              className="block w-full text-left px-3 py-2 text-sm font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50 rounded-md"
+              className="block w-full text-left px-3 py-2 text-sm font-medium text-gray-700 hover:text-[#222222] hover:bg-gray-50 rounded-md"
             >
               Contact Us
             </button>

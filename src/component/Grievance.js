@@ -221,7 +221,7 @@ const GrievanceRedressalContent = () => {
               href="https://scores.sebi.gov.in/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-teal-600 hover:underline flex items-center text-sm md:text-base"
+              className="text-[#222222] hover:underline flex items-center text-sm md:text-base"
             >
               Link to SCORES Portal
               <ExternalLink className="w-4 h-4 ml-1" />
@@ -238,7 +238,7 @@ const GrievanceRedressalContent = () => {
               href="https://smartodr.in/login"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-teal-600 hover:underline flex items-center text-sm md:text-base"
+              className="text-[#222222] hover:underline flex items-center text-sm md:text-base"
             >
               Link to ODR Portal
               <ExternalLink className="w-4 h-4 ml-1" />

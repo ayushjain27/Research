@@ -180,14 +180,14 @@ const InternalPoliciesContent = () => {
               </h2>
               <div className="text-gray-700 text-sm md:text-base space-y-2">
                 <div className="flex items-start space-x-2">
-                  <CheckCircle className="w-4 h-4 text-teal-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-4 h-4 text-[#222222] mt-0.5 flex-shrink-0" />
                   <span>
                     The Research Report issued by Research Analyst shall be
                     based on adequate documentary research evidence.
                   </span>
                 </div>
                 <div className="flex items-start space-x-2">
-                  <CheckCircle className="w-4 h-4 text-teal-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-4 h-4 text-[#222222] mt-0.5 flex-shrink-0" />
                   <span>
                     Research Analyst shall not provide any promise or assurance
                     of favourable review in research report to the Company or
@@ -288,7 +288,7 @@ const InternalPoliciesContent = () => {
                     Research Analyst shall disclose in public appearance with
                     regard to receipt of compensation:
                     <div className="flex items-start space-x-2 mt-2">
-                      <CheckCircle className="w-4 h-4 text-teal-600 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-[#222222] mt-0.5 flex-shrink-0" />
                       <span>
                         Whether Research Analyst or its/his/her/their associates
                         have received any compensation from the subject company
@@ -296,7 +296,7 @@ const InternalPoliciesContent = () => {
                       </span>
                     </div>
                     <div className="flex items-start space-x-2 mt-1">
-                      <CheckCircle className="w-4 h-4 text-teal-600 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-[#222222] mt-0.5 flex-shrink-0" />
                       <span>
                         Whether the subject company is/was client of Research
                         Analyst during 12 months preceding the date of
@@ -368,17 +368,17 @@ const InternalPoliciesContent = () => {
                     Research Analyst shall maintain and preserve following
                     records for a minimum period of 5 years:
                     <div className="flex items-start space-x-2 mt-2">
-                      <CheckCircle className="w-4 h-4 text-teal-600 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-[#222222] mt-0.5 flex-shrink-0" />
                       <span>Research recommendation provided</span>
                     </div>
                     <div className="flex items-start space-x-2 mt-1">
-                      <CheckCircle className="w-4 h-4 text-teal-600 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-[#222222] mt-0.5 flex-shrink-0" />
                       <span>
                         Rationale for arriving at research recommendation
                       </span>
                     </div>
                     <div className="flex items-start space-x-2 mt-1">
-                      <CheckCircle className="w-4 h-4 text-teal-600 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-[#222222] mt-0.5 flex-shrink-0" />
                       <span>Record of public appearance</span>
                     </div>
                   </li>
