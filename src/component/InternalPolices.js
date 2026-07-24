@@ -38,24 +38,30 @@ const InternalPoliciesContent = () => {
         </h1>
       </div>
 
-      {/* Tabs */}
+      {/* FIXED: Tabs with ARIA roles */}
       <div className="border-b border-gray-200 bg-white sticky top-0 z-10">
-        <div className="flex space-x-1 px-4">
-          <div className="flex space-x-1 px-4">
-            {tabs.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => scrollToSection(tab.ref, tab.id)}
-                className={`px-3 py-2 text-xs md:text-sm font-medium whitespace-nowrap border-b-2 transition-colors duration-200 ${
-                  activeTab === tab.id
-                    ? "border-teal-500 text-[#222222] bg-white"
-                    : "border-transparent hover:border-gray-300 hover:text-gray-700"
-                }`}
-              >
-                {tab.title}
-              </button>
-            ))}
-          </div>
+        <div
+          role="tablist"
+          aria-label="Internal Policies Sections"
+          className="flex space-x-1 px-4 overflow-x-auto"
+        >
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              role="tab"
+              aria-selected={activeTab === tab.id}
+              aria-controls={`panel-${tab.id}`}
+              id={`tab-${tab.id}`}
+              onClick={() => scrollToSection(tab.ref, tab.id)}
+              className={`px-3 py-2 text-xs md:text-sm font-medium whitespace-nowrap border-b-2 transition-colors duration-200 ${
+                activeTab === tab.id
+                  ? "border-teal-500 text-[#222222] bg-white"
+                  : "border-transparent hover:border-gray-300 hover:text-gray-700"
+              }`}
+            >
+              {tab.title}
+            </button>
+          ))}
         </div>
       </div>
 
@@ -63,12 +69,18 @@ const InternalPoliciesContent = () => {
       <div
         role="region"
         aria-label="Internal policies content"
-        tabIndex="0"
+        tabIndex={0}
         className="p-4 md:p-6 space-y-6 max-h-[600px] overflow-y-auto"
       >
         {/* Introduction Section */}
         <div>
-          <section ref={introductionRef} className="scroll-mt-24">
+          <section
+            ref={introductionRef}
+            role="tabpanel"
+            id="panel-introduction"
+            aria-labelledby="tab-introduction"
+            className="scroll-mt-24"
+          >
             <div className="space-y-2">
               <h2 className="text-xl font-bold text-gray-800 mb-2">
                 INTRODUCTION:
@@ -87,7 +99,13 @@ const InternalPoliciesContent = () => {
           </section>
 
           {/* Applicability Section */}
-          <section ref={applicabilityRef} className="scroll-mt-24">
+          <section
+            ref={applicabilityRef}
+            role="tabpanel"
+            id="panel-applicability"
+            aria-labelledby="tab-applicability"
+            className="scroll-mt-24"
+          >
             <div className="space-y-2">
               <h2 className="text-xl font-bold text-gray-800 mb-2">
                 APPLICABILITY:
@@ -103,7 +121,13 @@ const InternalPoliciesContent = () => {
           </section>
 
           {/* Definitions Section */}
-          <section ref={definitionsRef} className="scroll-mt-24">
+          <section
+            ref={definitionsRef}
+            role="tabpanel"
+            id="panel-definitions"
+            aria-labelledby="tab-definitions"
+            className="scroll-mt-24"
+          >
             <div className="space-y-2">
               <h2 className="text-xl font-bold text-gray-800 mb-2">
                 IMPORTANT DEFINITIONS:
@@ -136,7 +160,13 @@ const InternalPoliciesContent = () => {
           </section>
 
           {/* Trading Limitations Section */}
-          <section ref={limitationsRef} className="scroll-mt-24">
+          <section
+            ref={limitationsRef}
+            role="tabpanel"
+            id="panel-limitations"
+            aria-labelledby="tab-limitations"
+            className="scroll-mt-24"
+          >
             <div className="space-y-2">
               <h2 className="text-xl font-bold text-gray-800 mb-2">
                 1. LIMITATIONS ON TRADING BY RESEARCH ANALYSTS:
@@ -177,7 +207,13 @@ const InternalPoliciesContent = () => {
           </section>
 
           {/* Publication Section */}
-          <section ref={publicationRef} className="scroll-mt-24">
+          <section
+            ref={publicationRef}
+            role="tabpanel"
+            id="panel-publication"
+            aria-labelledby="tab-publication"
+            className="scroll-mt-24"
+          >
             <div className="space-y-2">
               <h2 className="text-xl font-bold text-gray-800 mb-2">
                 2. LIMITATION ON PUBLICATION OF RESEARCH REPORT, PUBLIC
@@ -185,14 +221,14 @@ const InternalPoliciesContent = () => {
               </h2>
               <div className="text-gray-700 text-sm md:text-base space-y-2">
                 <div className="flex items-start space-x-2">
-                  <CheckCircle className="w-4 h-4 text-[#222222] mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-4 h-4 text-[#222222] mt-0.5 flex-shrink-0" aria-hidden="true" />
                   <span>
                     The Research Report issued by Research Analyst shall be
                     based on adequate documentary research evidence.
                   </span>
                 </div>
                 <div className="flex items-start space-x-2">
-                  <CheckCircle className="w-4 h-4 text-[#222222] mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-4 h-4 text-[#222222] mt-0.5 flex-shrink-0" aria-hidden="true" />
                   <span>
                     Research Analyst shall not provide any promise or assurance
                     of favourable review in research report to the Company or
@@ -206,7 +242,13 @@ const InternalPoliciesContent = () => {
           </section>
 
           {/* Disclosures Section */}
-          <section ref={disclosuresRef} className="scroll-mt-24">
+          <section
+            ref={disclosuresRef}
+            role="tabpanel"
+            id="panel-disclosures"
+            aria-labelledby="tab-disclosures"
+            className="scroll-mt-24"
+          >
             <div className="space-y-2">
               <h2 className="text-xl font-bold text-gray-800 mb-2">
                 3. DISCLOSURES IN RESEARCH REPORT
@@ -293,7 +335,7 @@ const InternalPoliciesContent = () => {
                     Research Analyst shall disclose in public appearance with
                     regard to receipt of compensation:
                     <div className="flex items-start space-x-2 mt-2">
-                      <CheckCircle className="w-4 h-4 text-[#222222] mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-[#222222] mt-0.5 flex-shrink-0" aria-hidden="true" />
                       <span>
                         Whether Research Analyst or its/his/her/their associates
                         have received any compensation from the subject company
@@ -301,7 +343,7 @@ const InternalPoliciesContent = () => {
                       </span>
                     </div>
                     <div className="flex items-start space-x-2 mt-1">
-                      <CheckCircle className="w-4 h-4 text-[#222222] mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-[#222222] mt-0.5 flex-shrink-0" aria-hidden="true" />
                       <span>
                         Whether the subject company is/was client of Research
                         Analyst during 12 months preceding the date of
@@ -358,7 +400,13 @@ const InternalPoliciesContent = () => {
           </section>
 
           {/* Other Conditions Section */}
-          <section ref={conditionsRef} className="scroll-mt-24">
+          <section
+            ref={conditionsRef}
+            role="tabpanel"
+            id="panel-conditions"
+            aria-labelledby="tab-conditions"
+            className="scroll-mt-24"
+          >
             <div className="space-y-2">
               <h2 className="text-xl font-bold text-gray-800 mb-2">
                 4. OTHER CONDITIONS:
@@ -373,17 +421,17 @@ const InternalPoliciesContent = () => {
                     Research Analyst shall maintain and preserve following
                     records for a minimum period of 5 years:
                     <div className="flex items-start space-x-2 mt-2">
-                      <CheckCircle className="w-4 h-4 text-[#222222] mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-[#222222] mt-0.5 flex-shrink-0" aria-hidden="true" />
                       <span>Research recommendation provided</span>
                     </div>
                     <div className="flex items-start space-x-2 mt-1">
-                      <CheckCircle className="w-4 h-4 text-[#222222] mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-[#222222] mt-0.5 flex-shrink-0" aria-hidden="true" />
                       <span>
                         Rationale for arriving at research recommendation
                       </span>
                     </div>
                     <div className="flex items-start space-x-2 mt-1">
-                      <CheckCircle className="w-4 h-4 text-[#222222] mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-[#222222] mt-0.5 flex-shrink-0" aria-hidden="true" />
                       <span>Record of public appearance</span>
                     </div>
                   </li>

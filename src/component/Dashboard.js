@@ -110,7 +110,7 @@ const AKVHomepage = () => {
         <div className="relative w-150 h-100">
           <img
             src={Logo}
-            alt="AKV Equity Research Logo"
+            alt="AKV Equity Research - Home"
             className="h-13 w-auto"
           />
         </div>
