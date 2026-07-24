@@ -59,7 +59,7 @@ const HeaderTab = ({
           closeMobileMenu();
         }
       }}
-      aria-label="Go to Home"
+      aria-label="AKV Equity Research by Abishek Kondagunta Venkatesh Home"
     >
       <div className="flex items-flex-start space-x-3">
         <div className="relative w-100 md:w-150 h-8 md:h-100">
