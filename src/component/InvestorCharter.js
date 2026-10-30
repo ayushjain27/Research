@@ -562,7 +562,7 @@ const InvestorCharterContent = () => {
 
               <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
                 <p className="text-gray-700 mb-4">
-                  Data for the month ending - June 2026
+                  Data for the month ending - October 2026
                 </p>
 
                 <div

@@ -680,7 +680,7 @@ const AKVHomepage = () => {
                     INH000022066
                     <br />
                     <span className="font-medium">Validity:</span> July 28, 2025
-                    – July 27, 2030
+                    – Perpetual
                   </p>
                 </div>
               </div>
